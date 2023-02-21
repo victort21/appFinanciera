@@ -1,4 +1,4 @@
-<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="documentacionForm">
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteService.formularioCliente">
   <div class="row">
     <div class="col-md-6">
       <div class="mb-3">
@@ -9,7 +9,7 @@
           class="form-select"
           aria-label="Seleccionar Tipo de documentacion"
           formControlName="tipoDocumentacion"
-          [class]="vs.campoObligatorio('identificacion', documentacionForm) ? 'border border-danger' : ''"
+          [class]="vs.campoObligatorio('identificacion', clienteService.formularioCliente) ? 'border border-danger' : ''"
         >
           <option selected disabled value="">--Seleccione--</option>
           <option value="servicios_basicos">Recibos de servicios básicos</option>
@@ -33,5 +33,5 @@
 </form>
 
 <pre>
-  {{documentacionForm.value | json}}
+  {{clienteService.formularioCliente.value | json}}
 </pre>

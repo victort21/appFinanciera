@@ -19,20 +19,24 @@
 
 </header>
 
-<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="avalForm">
+<form
+  class="bg-white w-lg-75 p-3 mx-auto mt-3"
+  [formGroup]="clienteService.formularioCliente"
+  (ngSubmit)="agregarCliente()"
+>
   <div class="mb-3">
     <label for="nombres" class="form-label">Nombres</label>
 
     <input
       type="text"
-      formControlName="nombres"
+      formControlName="avalNombres"
       id="nombres"
-      [class]="validator.campoObligatorio('nombres', avalForm) ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('nombres', clienteService.formularioCliente) ? 'border border-danger' : ''"
       class="form-control"
       placeholder="Nombres del cliente"
     >
 
-    <span class="text-danger fw-bold" *ngIf="validator.errorNombres(avalForm)">
+    <span class="text-danger fw-bold" *ngIf="validator.errorNombres(clienteService.formularioCliente)">
       Se esperaba en formato de Nombre y Apellido
     </span>
   </div>
@@ -44,14 +48,14 @@
     
         <input
           type="text"
-          formControlName="primerApellido"
+          formControlName="avalPrimerApellido"
           id="primerApellido"
-          [class]="validator.campoObligatorio('primerApellido', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('primerApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Primer Apellido del cliente"
         >
     
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'primerApellido')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'primerApellido')">
           No se aceptan numeros
         </span>
       </div>
@@ -63,14 +67,14 @@
     
         <input
           type="text"
-          formControlName="segundoApellido"
+          formControlName="avalSegundoApellido"
           id="segundoApellido"
-          [class]="validator.campoObligatorio('segundoApellido', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('segundoApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Segundo Apellido del cliente"
         >
     
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'segundoApellido')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'segundoApellido')">
           No se aceptan numeros
         </span>
       </div>
@@ -83,13 +87,13 @@
     <input
       type="number"
       id="cedula"
-      formControlName="cedula"
+      formControlName="avalCedula"
       class="form-control"
-      [class]="validator.campoObligatorio('cedula', avalForm) ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('cedula', clienteService.formularioCliente) ? 'border border-danger' : ''"
       placeholder="Ingrese el numero de identidad"
     >
 
-    <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'cedula')">
+    <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'cedula')">
       Solo permite ingresar numeros
     </span>
   </div>
@@ -103,13 +107,13 @@
         <input
           type="text"
           id="municipio"
-          formControlName="municipio"
+          formControlName="avalMunicipio"
           class="form-control"
-          [class]="validator.campoObligatorio('municipio', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('municipio', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
     
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'municipio')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'municipio')">
           Solo permite ingresar letras
         </span>
       </div>
@@ -122,9 +126,9 @@
         <input
           type="text"
           id="colonia"
-          formControlName="colonia"
+          formControlName="avalColonia"
           class="form-control"
-          [class]="validator.campoObligatorio('colonia', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('colonia', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
       </div>
@@ -137,13 +141,13 @@
         <input
           type="text"
           id="calle"
-          formControlName="calle"
+          formControlName="avalCalle"
           class="form-control"
-          [class]="validator.campoObligatorio('calle', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('calle', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
 
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'calle')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'calle')">
           Solo permite ingresar letras
         </span>
       </div>
@@ -156,12 +160,12 @@
         <input
           type="number"
           id="casa"
-          formControlName="casa"
+          formControlName="avalCasa"
           class="form-control"
-          [class]="validator.campoObligatorio('casa', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('casa', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de casa"
         >
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'casa')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'casa')">
           Solo permite ingresar numeros
         </span>
       </div>
@@ -171,9 +175,9 @@
       <div class="mb-3">
         <label for="referencia" class="form-label">Referencia domicilio</label>
         <textarea
-          formControlName="referencia"
+          formControlName="avalReferencia"
           class="form-control"
-          [class]="validator.campoObligatorio('referencia', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('referencia', clienteService.formularioCliente) ? 'border border-danger' : ''"
           id="referencia"
           rows="5"
           placeholder="Ingrese una referencia del domicilio"
@@ -192,12 +196,12 @@
           <input
             type="number"
             id="celular"
-            formControlName="celular"
+            formControlName="avalCelular"
             class="form-control"
-            [class]="validator.campoObligatorio('celular', avalForm) ? 'border border-danger' : ''"
+            [class]="validator.campoObligatorio('celular', clienteService.formularioCliente) ? 'border border-danger' : ''"
             placeholder="Ingrese el numero de celular"
           >
-          <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'celular')">
+          <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'celular')">
             Solo permite ingresar letras
           </span>
         </div>
@@ -211,12 +215,12 @@
         <input
           type="number"
           id="telefonoFijo"
-          formControlName="telefonoFijo"
+          formControlName="avalTelefonoFijo"
           class="form-control"
-          [class]="validator.campoObligatorio('telefonoFijo', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('telefonoFijo', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de telefonoFijo"
         >
-        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(avalForm, 'telefonoFijo')">
+        <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'telefonoFijo')">
           Solo permite ingresar letras
         </span>
       </div>
@@ -232,9 +236,9 @@
           <label for="fechaNac">Fecha de nacimiento</label>
           <input
             type="date"
-            formControlName="fechaNac"
+            formControlName="avalFechaNac"
             id="fechaNac"
-            [class]="validator.campoObligatorio('fechaNac', avalForm) ? 'border border-danger' : ''"
+            [class]="validator.campoObligatorio('fechaNac', clienteService.formularioCliente) ? 'border border-danger' : ''"
             class="form-control"
           >
         </div>
@@ -250,9 +254,9 @@
             <div class="form-check">
               <input
                 class="form-check-input"
-                value="M" formControlName="genero"
+                value="M" formControlName="avalGenero"
                 type="radio"
-                name="genero"
+                name="avalGenero"
                 id="masculino"
               >
               <label class="form-check-label" for="masculino">
@@ -261,7 +265,14 @@
             </div>
       
             <div class="form-check">
-              <input class="form-check-input" value="F" formControlName="genero" type="radio" name="genero" id="femenino">
+              <input
+                class="form-check-input"
+                value="F"
+                formControlName="avalGenero"
+                type="radio"
+                name="avalGenero"
+                id="femenino"
+              >
               <label class="form-check-label" for="femenino">
                 Femenino
               </label>
@@ -278,9 +289,9 @@
         <select
           id="estadoCivil"
           class="form-select"
-          [class]="validator.campoObligatorio('estadoCivil', avalForm) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('estadoCivil', clienteService.formularioCliente) ? 'border border-danger' : ''"
           aria-label="Select estado civil"
-          formControlName="estadoCivil"
+          formControlName="avalEstadoCivil"
         >
           <option selected disabled value="">--Seleccione--</option>
           <option
@@ -291,6 +302,8 @@
     </div>
 
   </div>
+
+  <input type="submit" value="Verificar" class="btn-btn-primary">
   
 </form>
 

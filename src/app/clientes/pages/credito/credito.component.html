@@ -1,4 +1,4 @@
-<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="creditoForm">
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteService.formularioCliente">
   <div class="mb-3">
     <label for="producto" class="form-label">Producto</label>
     <select
@@ -6,7 +6,7 @@
       class="form-select"
       aria-label="Select productos"
       formControlName="producto"
-      [class]="vs.campoObligatorio('producto', creditoForm) ? 'border border-danger' : ''"
+      [class]="vs.campoObligatorio('producto', clienteService.formularioCliente) ? 'border border-danger' : ''"
     >
       <option selected disabled value="">--Seleccione--</option>
       <option value="microfondo">Microfondo</option>
@@ -25,7 +25,7 @@
           class="form-select"
           aria-label="Select periodicidad"
           formControlName="periodicidad"
-          [class]="vs.campoObligatorio('periodicidad', creditoForm) ? 'border border-danger' : ''"
+          [class]="vs.campoObligatorio('periodicidad', clienteService.formularioCliente) ? 'border border-danger' : ''"
         >
           <option selected disabled value="">--Seleccione--</option>
           <option value="diario">Diario</option>
@@ -46,10 +46,10 @@
           id="monto"
           class="form-control"
           placeholder="Ingrese el monto"
-          [class]="vs.campoObligatorio('monto', creditoForm) ? 'border border-danger' : ''"
+          [class]="vs.campoObligatorio('monto', clienteService.formularioCliente) ? 'border border-danger' : ''"
         >
 
-        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(creditoForm, 'monto')">
+        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(clienteService.formularioCliente, 'monto')">
           No se permiten letras
         </span>
       </div>
@@ -68,9 +68,9 @@
           id="plazo"
           class="form-control"
           placeholder="Ej: 2,3,4,6"
-          [class]="vs.campoObligatorio('plazo', creditoForm) ? 'border border-danger' : ''"
+          [class]="vs.campoObligatorio('plazo', clienteService.formularioCliente) ? 'border border-danger' : ''"
         >
-        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(creditoForm, 'plazo')">
+        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(clienteService.formularioCliente, 'plazo')">
           No se permiten letras
         </span>
       </div>
@@ -94,5 +94,5 @@
 </form>
 
 <pre>
-  {{creditoForm.value | json}}
+  {{clienteService.formularioCliente.value | json}}
 </pre>

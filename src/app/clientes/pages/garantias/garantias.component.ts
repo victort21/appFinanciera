@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { pattern } from '../../interfaces/validator';
+import { ClienteService } from '../../services/cliente.service';
 import { ValidatorService } from '../../services/validator.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class GarantiasComponent {
     precioArticulo: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
   });
 
-  constructor(private fb: FormBuilder, public vs: ValidatorService) {}
+  constructor(private fb: FormBuilder, public vs: ValidatorService,
+              public clienteService: ClienteService) {}
 
   foto(e: any) {
     const file = e.target.files[0];

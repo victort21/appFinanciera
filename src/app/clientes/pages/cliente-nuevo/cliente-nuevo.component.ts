@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { pattern } from '../../interfaces/validator';
+import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-nuevo',
@@ -11,6 +12,7 @@ export class ClienteNuevoComponent implements OnInit{
 
   label: string = '';
   opcConyugue: boolean = false;
+  formularioClienteService = this.clienteService.formularioCliente;
 
   estadoCivil = [
     {
@@ -39,52 +41,28 @@ export class ClienteNuevoComponent implements OnInit{
     },
   ]
 
-  clienteForm = this.fb.group({
-    identificacion: ['', [Validators.required] ],
-    carnetOcedula: ['', [Validators.required, Validators.pattern(pattern.numeros)  ] ],
-    nombres: ['', [Validators.required, Validators.pattern(pattern.nombres) ]  ],
-    primerApellido: ['', [Validators.required, Validators.pattern(pattern.letras) ] ],
-    segundoApellido: ['', [Validators.required, Validators.pattern(pattern.letras) ] ],
-    genero: ['M', [Validators.required] ],
-    fechaNac: ['', [Validators.required] ],
-    estadoCivil: ['', [Validators.required] ],
-    nombreConyugue: ['', [ Validators.pattern(pattern.letras) ] ],
-    DNI: ['', [Validators.pattern(pattern.numeros) ]],
-    lugarTrabajo: ['', Validators.pattern(pattern.letras)],
-    residencia: ['', [Validators.required] ],
-    dependientes: ['', [Validators.required, Validators.pattern(pattern.numeros)] ],
-    municipio: [''],
-    colonia: ['', [Validators.required] ],
-    calle: ['', [Validators.required] ],
-    casa: ['', [Validators.required, Validators.pattern(pattern.noDecimales)] ],
-    referencia: ['', [Validators.required] ],
-    tiempoResidir: ['', [Validators.required]],
-    numeroCelular1: ['', [Validators.required]],
-    numeroCelular2: ['', [Validators.required]],
-    telefonoFijo: ['', [Validators.required]],
-    correo: ['', []],
-  });
+  
 
   campoObligatorio(campo: string) {
-    return this.clienteForm.get(campo)?.errors && this.clienteForm.get(campo)?.touched 
+    return this.formularioClienteService.get(campo)?.errors && this.formularioClienteService.get(campo)?.touched 
   }
 
   get errorCarnetCedula(): string {
-    if(this.clienteForm.controls.carnetOcedula.errors?.['pattern']) {
+    if(this.formularioClienteService.controls.carnetOcedula.errors?.['pattern']) {
       return 'No se permiten letras'
     }
     return '';
   }
 
   get errorNombres():string {
-    if(this.clienteForm.controls.nombres.errors?.['pattern']) {
+    if(this.formularioClienteService.controls.nombres.errors?.['pattern']) {
       return 'Se esperaba en formato de Nombre y apellido'
     }
     return '';
   }
 
   soloNumeros(campo: string) {
-    return this.clienteForm.get(campo)?.errors?.['pattern']
+    return this.formularioClienteService.get(campo)?.errors?.['pattern']
   }
    
 
@@ -97,14 +75,55 @@ export class ClienteNuevoComponent implements OnInit{
       return 'Documento de identificacion';
     }
   }
-
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {}
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar,
+              public clienteService: ClienteService) {}
   ngOnInit(): void {
-    
+    this.formularioClienteService.controls.identificacion.setValue('cedula');
+    this.formularioClienteService.controls.carnetOcedula.setValue('0512200201594');
+    this.formularioClienteService.controls.nombres.setValue('Victor Miguel');
+    this.formularioClienteService.controls.primerApellido.setValue('Torres');
+    this.formularioClienteService.controls.segundoApellido.setValue('Quintanilla');
+    this.formularioClienteService.controls.fechaNac.setValue('2002-06-02');
+    this.formularioClienteService.controls.estadoCivil.setValue('soltero');
+    this.formularioClienteService.controls.residencia.setValue('familiar');
+    this.formularioClienteService.controls.dependientes.setValue('5');
+    this.formularioClienteService.controls.colonia.setValue('colonia cliente');
+    this.formularioClienteService.controls.calle.setValue('calle cliente');
+    this.formularioClienteService.controls.tiempoResidir.setValue('200');
+    this.formularioClienteService.controls.residencia.setValue('200');
+    this.formularioClienteService.controls.casa.setValue('21');
+    this.formularioClienteService.controls.referencia.setValue('referencia domicilio cliente');
+    this.formularioClienteService.controls.numeroCelular1.setValue('99152520');
+    this.formularioClienteService.controls.numeroCelular2.setValue('99152520');
+    this.formularioClienteService.controls.telefonoFijo.setValue('25542121');
+    this.formularioClienteService.controls.correo.setValue('victor@correo.com');
+
+    this.formularioClienteService.controls.avalNombres.setValue('Roxana Micaela');
+    this.formularioClienteService.controls.avalPrimerApellido.setValue('Hernandez');
+    this.formularioClienteService.controls.avalSegundoApellido.setValue('Martinez');
+    this.formularioClienteService.controls.avalCedula.setValue('051220011478');
+    this.formularioClienteService.controls.avalMunicipio.setValue('aval municipio');
+    this.formularioClienteService.controls.avalColonia.setValue('aval colonia');
+    this.formularioClienteService.controls.avalCalle.setValue('aval calle');
+    this.formularioClienteService.controls.avalCasa.setValue('21');
+    this.formularioClienteService.controls.avalCasa.setValue('aval casa');
+    this.formularioClienteService.controls.avalReferencia.setValue('referencia aval domicilio');
+    this.formularioClienteService.controls.avalCelular.setValue('99152520');
+    this.formularioClienteService.controls.avalTelefonoFijo.setValue('2541254');
+
+    this.formularioClienteService.controls.nombreArticulo.setValue('Celular');
+    this.formularioClienteService.controls.precioArticulo.setValue('12000');
+    this.formularioClienteService.controls.tipoDocumentacion.setValue('servicios_basicos');
+
+    this.formularioClienteService.controls.producto.setValue('microfondo');
+    this.formularioClienteService.controls.periodicidad.setValue('semanal');
+    this.formularioClienteService.controls.monto.setValue('10000');
+    this.formularioClienteService.controls.plazo.setValue('12');
+    this.formularioClienteService.controls.numeroCuotas.setValue(12 * 4);
   }
 
   get mostrarOpcConyugue():boolean {
-    if(this.clienteForm.controls.estadoCivil.value == 'casado' || this.clienteForm.controls.estadoCivil.value == 'conviviente') {
+    if(this.formularioClienteService.controls.estadoCivil.value == 'casado' || this.formularioClienteService.controls.estadoCivil.value == 'conviviente') {
       return true;
     }
     
@@ -112,21 +131,21 @@ export class ClienteNuevoComponent implements OnInit{
   }
 
   agregarCliente() {
-    if(this.clienteForm.invalid) {
-      this.clienteForm.markAllAsTouched();
-      this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
-        duration: 3000,
-      });
-      Object.values(this.clienteForm.controls).forEach(control => {
-        if(control.errors?.['required']) {
-          control.markAsTouched();
-        }
-      });
+    // if(this.clienteForm.invalid) {
+    //   this.clienteForm.markAllAsTouched();
+    //   this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
+    //     duration: 3000,
+    //   });
+    //   Object.values(this.clienteForm.controls).forEach(control => {
+    //     if(control.errors?.['required']) {
+    //       control.markAsTouched();
+    //     }
+    //   });
 
-      return;
-    };
+    //   return;
+    // };
 
-    console.log(this.clienteForm.value);
+    console.log(this.formularioClienteService.value);
   }
 
   cambiarLabel(e: any) {

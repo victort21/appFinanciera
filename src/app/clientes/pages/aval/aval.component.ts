@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { pattern } from '../../interfaces/validator';
+
+import { ClienteService } from '../../services/cliente.service';
 import { ValidatorService } from '../../services/validator.service';
-import { ClienteNuevoComponent } from '../cliente-nuevo/cliente-nuevo.component';
 
 
 @Component({
@@ -40,26 +39,9 @@ export class AvalComponent {
       texto: 'Conviviente'
     },
   ]
-
-  avalForm = this.fb.group({
-    nombres: ['', [Validators.required, Validators.pattern(pattern.nombres)]  ],
-    primerApellido: ['',  [ Validators.required, Validators.pattern(pattern.letrasSpaces)]  ],
-    segundoApellido: ['', [ Validators.required, Validators.pattern(pattern.letrasSpaces)]],
-    cedula: ['', [Validators.required, Validators.pattern(pattern.noDecimales)] ],
-    municipio: ['', [ Validators.required] ],
-    colonia: ['', [ Validators.required ] ],
-    calle: ['', [ Validators.required ] ],
-    casa: ['', [ Validators.required, Validators.pattern(pattern.noDecimales) ] ],
-    referencia: ['', Validators.required],
-    celular: ['', [Validators.required, Validators.pattern(pattern.noDecimales) ] ],
-    telefonoFijo: ['', [Validators.required, Validators.pattern(pattern.noDecimales) ] ],
-    fechaNac: ['', [ Validators.required ] ],
-    genero: ['M', [ Validators.required ] ],
-    estadoCivil: ['', Validators.required]
-  });
   
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar,
-              public validator: ValidatorService) {}
+  constructor(private _snackBar: MatSnackBar,
+              public validator: ValidatorService, public clienteService: ClienteService) {}
 
   get isOpcional() {
     if(this.opcional) {
@@ -74,19 +56,21 @@ export class AvalComponent {
   }
 
   agregarCliente() {
-    if(this.avalForm.invalid) {
-      this.avalForm.markAllAsTouched();
-      this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
-        duration: 3000,
-      });
-      Object.values(this.avalForm.controls).forEach(control => {
-        control.markAsTouched();
-      });
+    const formulario = this.clienteService.formularioCliente;
 
-      return;
-    };
+    // if(formulario.invalid) {
+    //   formulario.markAllAsTouched();
+    //   this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
+    //     duration: 3000,
+    //   });
+    //   Object.values(formulario.controls).forEach(control => {
+    //     control.markAsTouched();
+    //   });
 
-    console.log(this.avalForm.value);
+    //   return;
+    // };
+
+    console.log(formulario.value);
     // console.log(ClienteNuevoComponent);
   }
 }

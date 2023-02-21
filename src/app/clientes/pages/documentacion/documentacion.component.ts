@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { pattern } from '../../interfaces/validator';
+
+import { ClienteService } from '../../services/cliente.service';
 import { ValidatorService } from '../../services/validator.service';
 
 @Component({
@@ -9,9 +10,7 @@ import { ValidatorService } from '../../services/validator.service';
 })
 export class DocumentacionComponent {
 
-  documentacionForm = this.fb.group({
-    tipoDocumentacion: ['', [ Validators.required ] ],
-  });
 
-  constructor(private fb: FormBuilder, public vs: ValidatorService) {}
+  constructor(private fb: FormBuilder, public vs: ValidatorService,
+              public clienteService: ClienteService) {}
 }

@@ -4,13 +4,13 @@
 </header>
 
 
-<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteForm" (ngSubmit)="agregarCliente()">
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteService.formularioCliente">
   <!-- Identificacion -->
   <div class="row">
     <div class="col-md-6">
       <div class="mb-3">
         <label for="identificacion" class="form-label">
-          Identificacion
+          Identificación
         </label>
     
         <div class="row">
@@ -440,28 +440,27 @@
 
   <input 
     class="btn btn-success float-end" type="submit"
-    value="Ingresar"
-    [disabled]="clienteForm.disabled"
+    value="Siguiente"
   />
 </form>
 
 
 <h5>touched</h5>
 <pre>
-  {{clienteForm.touched}}
+  {{formularioClienteService.touched}}
 </pre>
 
 <h5>Form values</h5>
 <pre>
-  {{clienteForm.value | json}}
+  {{formularioClienteService.value | json}}
 </pre>
 
 <h5>DNI</h5>
 <pre>
-  {{clienteForm.controls.carnetOcedula.errors | json}}
+  {{formularioClienteService.controls.carnetOcedula.errors | json}}
 </pre>
 
 <h5>carnetOcedula</h5>
 <pre>
-  {{clienteForm.controls.carnetOcedula.errors | json}}
+  {{formularioClienteService.controls.carnetOcedula.errors | json}}
 </pre>
