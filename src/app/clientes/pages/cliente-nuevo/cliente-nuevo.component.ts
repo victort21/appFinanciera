@@ -118,8 +118,8 @@ export class ClienteNuevoComponent implements OnInit{
     this.formularioClienteService.controls.producto.setValue('microfondo');
     this.formularioClienteService.controls.periodicidad.setValue('semanal');
     this.formularioClienteService.controls.monto.setValue('10000');
-    this.formularioClienteService.controls.plazo.setValue('12');
-    this.formularioClienteService.controls.numeroCuotas.setValue(12 * 4);
+    // this.formularioClienteService.controls.plazo.setValue('1');
+    // this.formularioClienteService.controls.numeroCuotas.setValue(0);
   }
 
   get mostrarOpcConyugue():boolean {

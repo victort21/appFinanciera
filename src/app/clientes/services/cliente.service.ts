@@ -59,7 +59,7 @@ export class ClienteService {
     periodicidad: ['', [ Validators.required ] ],
     monto: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
     plazo: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
-    numeroCuotas: [{value: 12 * 5, disabled: true}, [ Validators.required ] ],
+    numeroCuotas: [{value: 0, disabled: true}, [ Validators.required ] ],
   });
 
   constructor(private fb: FormBuilder) { }
