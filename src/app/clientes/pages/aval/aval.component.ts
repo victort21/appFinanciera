@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { ClienteService } from '../../services/cliente.service';
@@ -45,14 +45,47 @@ export class AvalComponent {
 
   get isOpcional() {
     if(this.opcional) {
-      return 'SI'
-    }else {
       return 'NO'
+    }else {
+      return 'SI'
     }
   }
 
   avalOpc() {
     this.opcional = !this.opcional
+    const inputCheck = this.clienteService.formularioCliente;
+
+    if(!this.opcional) {
+      inputCheck.get('avalNombres')?.disable();
+      inputCheck.get('avalPrimerApellido')?.disable();
+      inputCheck.get('avalSegundoApellido')?.disable();
+      inputCheck.get('avalCedula')?.disable();
+      inputCheck.get('avalMunicipio')?.disable();
+      inputCheck.get('avalColonia')?.disable();
+      inputCheck.get('avalCalle')?.disable();
+      inputCheck.get('avalCasa')?.disable();
+      inputCheck.get('avalReferencia')?.disable();
+      inputCheck.get('avalCelular')?.disable();
+      inputCheck.get('avalTelefonoFijo')?.disable();
+      inputCheck.get('avalFechaNac')?.disable();
+      inputCheck.get('avalGenero')?.disable();
+      inputCheck.get('avalEstadoCivil')?.disable();
+    }else {
+      inputCheck.get('avalNombres')?.enable();
+      inputCheck.get('avalPrimerApellido')?.enable();
+      inputCheck.get('avalSegundoApellido')?.enable();
+      inputCheck.get('avalCedula')?.enable();
+      inputCheck.get('avalMunicipio')?.enable();
+      inputCheck.get('avalColonia')?.enable();
+      inputCheck.get('avalCalle')?.enable();
+      inputCheck.get('avalCasa')?.enable();
+      inputCheck.get('avalReferencia')?.enable();
+      inputCheck.get('avalCelular')?.enable();
+      inputCheck.get('avalTelefonoFijo')?.enable();
+      inputCheck.get('avalFechaNac')?.enable();
+      inputCheck.get('avalGenero')?.enable();
+      inputCheck.get('avalEstadoCivil')?.enable();
+    }
   }
 
   agregarCliente() {
