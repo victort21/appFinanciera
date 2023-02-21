@@ -1,0 +1,98 @@
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="creditoForm">
+  <div class="mb-3">
+    <label for="producto" class="form-label">Producto</label>
+    <select
+      id="producto"
+      class="form-select"
+      aria-label="Select productos"
+      formControlName="producto"
+      [class]="vs.campoObligatorio('producto', creditoForm) ? 'border border-danger' : ''"
+    >
+      <option selected disabled value="">--Seleccione--</option>
+      <option value="microfondo">Microfondo</option>
+      <option value="producto">Productos...</option>
+    </select>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="periodicidad" class="form-label">Periodicidad</label>
+
+        <select
+          id="periodicidad"
+          class="form-select"
+          aria-label="Select periodicidad"
+          formControlName="periodicidad"
+          [class]="vs.campoObligatorio('periodicidad', creditoForm) ? 'border border-danger' : ''"
+        >
+          <option selected disabled value="">--Seleccione--</option>
+          <option value="diario">Diario</option>
+          <option value="semanal">Semanal</option>
+          <option value="mensual">Mensual</option>
+        </select>
+        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="monto" class="form-label">Monto Solicitado</label>
+
+        <input
+          type="text"
+          formControlName="monto"
+          id="monto"
+          class="form-control"
+          placeholder="Ingrese el monto"
+          [class]="vs.campoObligatorio('monto', creditoForm) ? 'border border-danger' : ''"
+        >
+
+        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(creditoForm, 'monto')">
+          No se permiten letras
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="plazo" class="form-label">Plazo (Meses)</label>
+
+        <input
+          type="number"
+          formControlName="plazo"
+          id="plazo"
+          class="form-control"
+          placeholder="Ej: 2,3,4,6"
+          [class]="vs.campoObligatorio('plazo', creditoForm) ? 'border border-danger' : ''"
+        >
+        <span class="text-danger fw-bold" *ngIf="vs.validarPattern(creditoForm, 'plazo')">
+          No se permiten letras
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="numeroCuotas" class="form-label">Numero de cuotas</label>
+
+        <input
+          type="text"
+          formControlName="numeroCuotas"
+          id="numeroCuotas"
+          class="form-control"
+          placeholder="Numero de cuotas"
+        >
+      </div>
+    </div>
+
+  </div>
+</form>
+
+<pre>
+  {{creditoForm.value | json}}
+</pre>

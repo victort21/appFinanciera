@@ -1,0 +1,52 @@
+{
+	"notas_credito": [
+		{
+			"nota_credito_id" : 1,
+			"fecha_trx" : "2021-01-10",
+			"cliente_id" : 1,
+			"cliente_nombre": "Insumos textiles del Salvador S.A. de C.V.",
+			"documento_id" : 1,
+			"numero_factura" : "001-01-0001-00000654",
+			"subtotal" : 1000.00,
+			"usuario_id" : 1
+		},
+		{
+			"nota_credito_id" : 2,
+			"fecha_trx" : "2021-01-10",
+			"cliente_id" : 1,
+			"cliente_nombre": "Insumos textiles del Salvador S.A. de C.V.",
+			"documento_id" : 1,
+			"numero_factura" : "001-01-0001-00000655",
+			"subtotal" : 1000.00,
+			"usuario_id" : 1
+		},
+		{
+			"nota_credito_id" : 3,
+			"fecha_trx" : "2021-01-10",
+			"cliente_id" : 1,
+			"cliente_nombre": "Insumos textiles del Salvador S.A. de C.V.",
+			"documento_id" : 1,
+			"numero_factura" : "001-01-0001-00000656",
+			"subtotal" : 1000.00,
+			"usuario_id" : 1
+		},
+		{
+			"nota_credito_id" : 4,
+			"fecha_trx" : "2021-01-10",
+			"cliente_id" : 1,
+			"cliente_nombre": "Insumos textiles del Salvador S.A. de C.V.",
+			"documento_id" : 1,
+			"numero_factura" : "001-01-0001-00000657",
+			"subtotal" : 1000.00,
+			"usuario_id" : 1
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

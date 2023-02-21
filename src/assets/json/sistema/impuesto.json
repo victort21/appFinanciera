@@ -1,0 +1,15 @@
+{
+	"impuestos":[
+		{"impuesto_id":"1", "nombre":"Impuesto 15%", "valor":0.15},
+		{"impuesto_id":"2", "nombre":"Impuesto 18%", "valor":0.15}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

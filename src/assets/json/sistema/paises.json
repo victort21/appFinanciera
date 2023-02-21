@@ -1,0 +1,15 @@
+{
+	"paises":[
+		{"pais_id":"1", "pais":"Honduras", "locale_id":"HN-es", "area_code":"504"},
+		{"pais_id":"2", "pais":"Estados Unidos", "locale_id":"EN-us", "area_code":"1"}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

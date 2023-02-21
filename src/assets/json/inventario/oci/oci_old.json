@@ -1,0 +1,84 @@
+{
+	"ocis": [
+		{
+			"oci_id":"1",
+			"oci_numero":"OCI-1",
+			"proveedor_id":"1",
+			"proveedor_nombre":"Proveedor 1",
+			"fecha_creacion":"2021-12-12",
+			"usuario_id_crea":"1",
+			"usuario_crea":"usuario 1",
+			"fecha_recepcion":"2021-12-12",
+			"usuario_id_recibe":"1",
+			"usuario_recibe":"usuario 2",
+			"oci_estado_id":"1",
+			"oci_estado_nombre":"Creado",
+			"oci_productos": [{
+				"producto_id": "1",
+				"codigo": "COD 1",
+				"nombre": "Producto 1",
+				"codi_prod_prov": "1",
+				"nombre_prod_prov": "CODPROV1",
+				"cantidad_solicitada": "100",
+				"cantidad_recibida": "0",
+				"costo_unidad": "25.00"
+			}]
+		},
+		{
+			"oci_id":"2",
+			"oci_numero":"OCI-2",
+			"proveedor_id":"2",
+			"proveedor_nombre":"Proveedor 2",
+			"fecha_creacion":"2021-12-12",
+			"usuario_id_crea":"2",
+			"usuario_crea":"usuario 2",
+			"fecha_recepcion":"2021-12-12",
+			"usuario_id_recibe":"3",
+			"usuario_recibe":"usuario 3",
+			"oci_estado_id":"2",
+			"oci_estado_nombre":"Recibido",
+			"oci_productos": [{
+				"producto_id": "1",
+				"codigo": "COD 1",
+				"nombre": "Producto 1",
+				"codi_prod_prov": "1",
+				"nombre_prod_prov": "CODPROV1",
+				"cantidad_solicitada": "100",
+				"cantidad_recibida": "0",
+				"costo_unidad": "25.00"
+			}]
+		},
+		{
+			"oci_id":"3",
+			"oci_numero":"OCI-3",
+			"proveedor_id":"3",
+			"proveedor_nombre":"Proveedor 3",
+			"fecha_creacion":"2021-12-12",
+			"usuario_id_crea":"3",
+			"usuario_crea":"usuario 3",
+			"fecha_recepcion":"2021-12-12",
+			"usuario_id_recibe":"4",
+			"usuario_recibe":"usuario 4",
+			"oci_estado_id":"3",
+			"oci_estado_nombre":"Pendiente",
+			"oci_productos": [{
+				"producto_id": "1",
+				"codigo": "COD 1",
+				"nombre": "Producto 1",
+				"codi_prod_prov": "1",
+				"nombre_prod_prov": "CODPROV1",
+				"cantidad_solicitada": "100",
+				"cantidad_recibida": "0",
+				"costo_unidad": "25.00"
+			}]
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 2,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

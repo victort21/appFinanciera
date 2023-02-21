@@ -1,0 +1,27 @@
+{
+	"tasa_cambio":[
+		{
+			"tasa_cambio_id":"1",
+			"fecha":"2021-01-01",
+			"usuario_id":"1",
+			"usuario_nombre":"Usuario 1",
+			"tasa_cambio":"23.2445"
+		},
+		{
+			"tasa_cambio_id":"1",
+			"fecha":"2021-01-01",
+			"usuario_id":"1",
+			"usuario_nombre":"Usuario 1",
+			"tasa_cambio":"23.2445"
+		}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

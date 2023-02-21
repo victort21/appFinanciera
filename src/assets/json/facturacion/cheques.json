@@ -1,0 +1,28 @@
+{
+	"documentos": [
+		{
+      "cheque": 		1,
+      "fecha:": 		"2021-11-021", 
+      "numero": 		1001, 
+      "valor:": 		1000,
+      "benefiario": "Insumos Textiles del Salvador S.A. de C.V.",
+			"motivo": 		"Pago de cheque"
+		},
+		{
+      "cheque": 		2,
+      "fecha:": 		"2021-12-021", 
+      "numero": 		1002, 
+      "valor:": 		2000,
+      "benefiario": "Cheque numero dos",
+			"motivo": 		"Pago de cheque"
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

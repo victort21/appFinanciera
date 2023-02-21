@@ -1,0 +1,85 @@
+{
+	"reporteConsumoClientePeriodoTiempo":[
+		{
+			"producto_id":1,
+			"producto_nombre":"Producto 1",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		},
+		{
+			"producto_id":"1",
+			"producto_nombre":"Producto 2",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		},
+		{
+			"producto_id":"1",
+			"producto_nombre":"Producto 3",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		},
+		{
+			"producto_id":"1",
+			"producto_nombre":"Producto 4",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		},
+		{
+			"producto_id":"1",
+			"producto_nombre":"Producto 5",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		},
+		{
+			"producto_id":"1",
+			"producto_nombre":"Producto 6",
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":124,
+			"mes_2":128,
+			"mes_3":125,
+			"mes_4":124,
+			"mes_5":126,
+			"mes_6":129
+		}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

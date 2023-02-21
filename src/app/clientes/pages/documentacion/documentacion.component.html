@@ -1,0 +1,37 @@
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="documentacionForm">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="documentacion" class="form-label">Tipo de Documentación</label>
+        
+        <select
+          id="documentacion"
+          class="form-select"
+          aria-label="Seleccionar Tipo de documentacion"
+          formControlName="tipoDocumentacion"
+          [class]="vs.campoObligatorio('identificacion', documentacionForm) ? 'border border-danger' : ''"
+        >
+          <option selected disabled value="">--Seleccione--</option>
+          <option value="servicios_basicos">Recibos de servicios básicos</option>
+          <option value="aviso_privacidad">Aviso de privacidad</option>
+          <option value="buro_credito">Buro de credito</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="file" capture="camera" accept="image/*" class="d-none" #camara>
+      <button type="button" class="me-3 d-md-none" (click)="camara.click()">camara</button>
+      <button type="button" class="me-3">Nuevo</button>
+      <button type="button" class="me-3">Lista</button>
+    </div>
+
+  </div>
+
+</form>
+
+<pre>
+  {{documentacionForm.value | json}}
+</pre>

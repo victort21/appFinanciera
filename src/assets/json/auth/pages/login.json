@@ -1,0 +1,11 @@
+{
+			"estado": true,
+			"error": false,
+			"error_code": "0-0",
+			"error_msg":"El usuario no existe",
+			"mensaje": "Usuario autenticado",
+			"usuario_id": 9999,
+			"usuario_nombre": "Usuario 9999",
+			"token": "abcDEF",
+			"msg": "abcDEF"
+}

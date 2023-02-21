@@ -1,0 +1,38 @@
+{
+	"movimiento_cuenta_banco": [
+		{
+			"movimiento_cuenta_banco_id" : 2,
+			"tipo_movimiento_id" : 1,
+			"tipo_movimiento_nombre" : "Entrada",
+			"detalle_movimiento" : "Pago de cheque No. 22332 de BAC a Juan Manual Gálvez",
+			"estado_id" : 1,
+			"estado_nombre" : "aprobado",
+			"numero_documento" : 1,
+			"fecha_trx" : "2021-11-21",
+			"valor_entrada": 1000.00,
+			"valor_salida": 0.00,
+			"saldo": 1000.00
+		},
+		{
+			"movimiento_cuenta_banco_id" : 1,
+			"tipo_movimiento_id" : 1,
+			"tipo_movimiento_nombre" : "salida",
+			"detalle_movimiento" : "Pago de cheque No. 22332 de BAC a Juan Manual Gálvez",
+			"estado_id" : 1,
+			"estado_nombre" : "aprobado",
+			"numero_documento" : 1,
+			"fecha_trx" : "2021-11-21",
+			"valor_entrada": 0.00,
+			"valor_salida": -1000.00,
+			"saldo": 0.00
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

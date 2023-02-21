@@ -1,0 +1,16 @@
+{
+	"formas_pago":[
+		{"forma_pago_id":"1", "nombre":"Efectivo", "estado_id":1, "estado_nombre":"Activo"},
+		{"forma_pago_id":"2", "nombre":"Bancos", "estado_id":2, "estado_nombre":"Inactivo"},
+		{"forma_pago_id":"3", "nombre":"Cheque", "estado_id":2, "estado_nombre":"Inactivo"}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

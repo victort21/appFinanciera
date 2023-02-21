@@ -1,0 +1,40 @@
+{
+	"empresas": [
+		{
+			"empresa_id": "1",
+			"id_fiscal":"0501200012345",
+			"nombre": "Integraciones tecnologicas",
+			"pais_id":"1",
+			"pais":"Honduras",
+			"ciudad":"San Pedro Sula",
+			"moneda_id":"1",
+			"moneda":"HND",
+			"codigo_postal":"21104",
+			"telefono_fijo":"N/A",
+			"telefono_movil":"N/A",
+			"direccion":"N/A",
+			"correo_electronico":"",
+			"fax":"N/A",
+			"fecha_creacion":"",
+			"usuario_id":"",
+			"usuario_creo":""
+		}
+	],
+	"paises":[
+		{"pais_id":"1", "pais":"Honduras"},
+		{"pais_id":"2", "pais":"Estados Unidos"}
+	],
+	"monedas":[
+		{"moneda_id":"1", "pais":"Honduras","currency_iso":"HNL", "currency_name":"Lempiras", "currency_code":"HNL"},
+		{"moneda_id":"2", "pais":"Estados Unidos", "currency_iso":"USD", "currency_name":"Dolares", "currency_code":"USD"}
+		
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

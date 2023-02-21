@@ -1,0 +1,123 @@
+{
+	"reporteClientesPareto":[
+		{
+			"cliente_id":1,
+			"cliente_nombre":"Insumos Textiles de El Salvador S.A. de C.V.",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":2,
+			"cliente_nombre":"Cliente 2",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id": 3,
+			"cliente_nombre":"Cliente 3",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":4,
+			"cliente_nombre":"Cliente 4",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":5,
+			"cliente_nombre":"Cliente 5",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":6,
+			"cliente_nombre":"Cliente 6",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":7,
+			"cliente_nombre":"Cliente 7",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":8,
+			"cliente_nombre":"Cliente 8",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":9,
+			"cliente_nombre":"Cliente 9",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		},
+		{
+			"cliente_id":10,
+			"cliente_nombre":"Cliente 10",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":1000
+		}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

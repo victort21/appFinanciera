@@ -1,0 +1,111 @@
+{
+	"categorias": [
+		{
+			"categoria_id": 1,
+			"nombre": "Categoría 1",
+			"estado_id": 2,
+			"estado_nombre": "Inactiva",
+			"fecha_creacion": "14-01-2021",
+			"usuario_id": 1,
+			"usuario_creo": "Administrador"
+		},
+    {
+			"categoria_id": 2,
+			"nombre": "Categoría 2",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 3,
+			"nombre": "Categoría 3",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 4,
+			"nombre": "Categoría 4",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 5,
+			"nombre": "Categoría 5",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 6,
+			"nombre": "Categoría 6",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 7,
+			"nombre": "Categoría 7",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 8,
+			"nombre": "Categoría 8",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 9,
+			"nombre": "Categoría 9",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 10,
+			"nombre": "Categoría 10",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		},
+		{
+			"categoria_id": 11,
+			"nombre": "Categoría 11",
+			"estado_id": 2,
+			"estado_nombre": "Inactivo",
+			"fecha_creacion": "15-01-2021",
+			"usuario_id": 2,
+			"usuario_creo": "Usuario"
+		}
+  ],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"cuenta_banco": [
+		{
+			"cuenta_banco_id" : "1",
+			"banco" : "Banco Ficohsa",
+			"numero_cuenta" : "8000202032",
+			"oficial_sac" : "Ninguno",
+			"telefono" : "+504 25042507",
+			"correo_electronico" : "contacto@ficohsa.com",
+			"cuenta_activa" : 1
+		},
+		{
+			"cuenta_banco_id" : "1",
+			"banco" : "Banco Ficohsa",
+			"numero_cuenta" : "8000202032",
+			"oficial_sac" : "Ninguno",
+			"telefono" : "+504 25042507",
+			"correo_electronico" : "contacto@ficohsa.com",
+			"cuenta_activa" : 2
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

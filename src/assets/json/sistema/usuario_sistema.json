@@ -1,0 +1,30 @@
+{
+	"usuarios":[
+		{
+			"usuario_id":"1",
+			"nombre":"Usuario administrador",
+			"usuario":"admin",
+			"correo_electronico":"admin@afatex.com",
+			"contrasena":"123456",
+			"acceso":"[]",
+			"servidor_correo":{
+				"host":"gmail",
+				"username":"usuario1@itgrahn.com",
+				"password":"123",
+				"smtp_secure":"123",
+				"port":"4000",
+				"ssl":"true",
+				"tsl":"true"
+			}
+		}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

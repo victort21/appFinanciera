@@ -1,0 +1,63 @@
+{
+	"ocis": [],
+	"proveedores":[
+		{
+			"proveedor_id":"1",
+			"codigo":"CODPROV1",
+			"nombre":"Proveedor 1"
+		},
+		{
+			"proveedor_id":"2",
+			"codigo":"CODPROV2",
+			"nombre":"Proveedor 2"
+		}
+	],
+	"productos":[
+		{
+			"producto_id":"1",
+			"codigo":"COD 1",
+			"nombre":"Producto 1",
+			"descripcion":"Descripción de producto 1",
+			"categoria_id":"1",
+			"categoria_nombre":"Categoría 1",
+			"presentacion_id":"1",
+			"presentacion_nombre":"Galón",
+			"stock_minimo":"1",
+			"stock_actual":"1",
+			"precio_venta":"50",
+			"precio_costo":"25",
+			"estado_id":"1",
+			"estado_nombre":"Activo",
+			"fecha_creacion":"2021-01-01",
+			"usuario_id":"1",
+			"usuario_creo":"Administrados"
+		},
+		{
+			"producto_id":"2",
+			"codigo":"COD 2",
+			"nombre":"Producto 2",
+			"descripcion":"Descripción de producto 2",
+			"categoria_id":"1",
+			"categoria_nombre":"Categoría 1",
+			"presentacion_id":"1",
+			"presentacion_nombre":"Galón",
+			"stock_minimo":"1",
+			"stock_actual":"1",
+			"precio_venta":"50",
+			"precio_costo":"25",
+			"estado_id":"1",
+			"estado_nombre":"Activo",
+			"fecha_creacion":"2021-01-01",
+			"usuario_id":"1",
+			"usuario_creo":"Administrados"
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 2,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

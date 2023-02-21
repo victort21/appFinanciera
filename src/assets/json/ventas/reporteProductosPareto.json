@@ -1,0 +1,68 @@
+{
+	"reporteProductosPareto":[
+		{
+			"producto_id":1,
+			"producto_nombre":"Producto 1",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":162
+		},
+		{
+			"producto_id":2,
+			"producto_nombre":"Producto 2",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":162
+		},
+		{
+			"producto_id":3,
+			"producto_nombre":"Producto 3",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":162
+		},
+		{
+			"producto_id":4,
+			"producto_nombre":"Producto 4",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":162
+		},
+		{
+			"producto_id":5,
+			"producto_nombre":"Producto 5",
+			"mes_1":25,
+			"mes_2":18,
+			"mes_3":14,
+			"mes_4":35,
+			"mes_5":25,
+			"mes_6":45,
+			"total":162
+		}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

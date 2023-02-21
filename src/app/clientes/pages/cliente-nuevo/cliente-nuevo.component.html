@@ -1,0 +1,467 @@
+<header class="m-3">
+  <h2 class="fs-2">Informacion del Cliente</h2>
+
+</header>
+
+
+<form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteForm" (ngSubmit)="agregarCliente()">
+  <!-- Identificacion -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="identificacion" class="form-label">
+          Identificacion
+        </label>
+    
+        <div class="row">
+          <div class="col">
+            <select
+              id="identificacion"
+              class="form-select"
+              aria-label="Select to DNI or Residencia"
+              formControlName="identificacion"
+              (change)="cambiarLabel($event)"
+              [class]="campoObligatorio('identificacion') ? 'border border-danger' : ''"
+            >
+              <option selected disabled value="">--Seleccione--</option>
+              <option value="cedula">Cedula de identidad</option>
+              <option value="carnet">Carnet de residencia</option>
+            </select>
+          </div>
+        </div>
+    
+        <!-- <span class="text-red-500 text-xs font-bold" *ngIf="errorName">
+          {{errorName}}
+        </span> -->
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="text" class="form-label text-capitalize">
+          {{label}}
+        </label>
+        <input
+          type="number"
+          id="text"
+          [class]="campoObligatorio('carnetOcedula') ? 'border border-danger' : ''"
+          formControlName="carnetOcedula"
+          class="form-control"
+          [placeholder]="placeholder"
+          #inputPass
+        />
+    
+        <span class="text-danger fw-bold" *ngIf="errorCarnetCedula">
+          {{errorCarnetCedula}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="nombres" class="form-label">Nombres</label>
+
+    <input
+      type="text"
+      formControlName="nombres"
+      id="nombres"
+      [class]="campoObligatorio('nombres') ? 'border border-danger' : ''"
+
+      class="form-control"
+      placeholder="Nombres del cliente"
+    >
+    <span class="text-danger fw-bold" *ngIf="errorNombres">
+      {{errorNombres}}
+    </span>
+  </div>
+
+  <!-- Apellidos -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="primerApellido" class="form-label">Primer Apellido</label>
+    
+        <input
+          type="text"
+          formControlName="primerApellido"
+          id="primerApellido"
+          [class]="campoObligatorio('primerApellido') ? 'border border-danger' : ''"
+          class="form-control"
+          placeholder="Primer Apellido del cliente">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="segundoApellido" class="form-label">Segundo Apellido</label>
+    
+        <input
+          type="text"
+          formControlName="segundoApellido"
+          id="segundoApellido"
+          [class]="campoObligatorio('segundoApellido') ? 'border border-danger' : ''"
+    
+          class="form-control"
+          placeholder="Segundo Apellido del cliente"
+        >
+       
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Genero/Sexo Cliente -->
+  <div class="row">
+    <div class="col-md-6">
+      <p>Sexo</p>
+      
+      <div class="d-flex gap-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            value="M" formControlName="genero"
+            type="radio"
+            name="genero"
+            id="masculino"
+          >
+          <label class="form-check-label" for="masculino">
+            Masculino
+          </label>
+        </div>
+  
+        <div class="form-check">
+          <input class="form-check-input" value="F" formControlName="genero" type="radio" name="genero" id="femenino">
+          <label class="form-check-label" for="femenino">
+            Femenino
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="fechaNac">Fecha de nacimiento</label>
+        <input
+          type="date"
+          formControlName="fechaNac"
+          id="fechaNac"
+          [class]="campoObligatorio('fechaNac') ? 'border border-danger' : ''"
+          class="form-control"
+        >
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="estadoCivil" class="form-label">Estado Civil</label>
+    
+        <select
+          id="estadoCivil"
+          class="form-select"
+          [class]="campoObligatorio('estadoCivil') ? 'border border-danger' : ''"
+    
+          aria-label="Select estado civil"
+          formControlName="estadoCivil"
+        >
+          <option selected disabled value="">--Seleccione--</option>
+          <option
+            *ngFor="let estado of estadoCivil"
+            [value]="estado.value"> {{estado.texto}} </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="residencia" class="form-label">Tipo de residencia</label>
+    
+        <select
+          id="residencia"
+          class="form-select"
+          formControlName="residencia"
+          [class]="campoObligatorio('residencia') ? 'border border-danger' : ''"
+    
+        >
+          <option selected disabled value="">--Seleccione--</option>
+          <option value="propia">Casa Propia</option>
+          <option value="alquilada">Casa Alquilada</option>
+          <option value="familiar">Casa Familiar</option>
+        </select>
+    
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="dependientes" class="form-label">Numero dependientes</label>
+
+    <input
+      type="number"
+      formControlName="dependientes"
+      id="dependientes"
+      [class]="campoObligatorio('dependientes') ? 'border border-danger' : ''"
+      class="form-control"
+      placeholder="Numero de dependientes del cliente"
+    >
+
+    <span class="text-danger fw-bold" *ngIf="soloNumeros('dependientes')">
+      Solo se permiten numeros
+    </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="municipio" class="form-label">Municipio (Agencia)</label>
+
+    <input
+      type="text"
+      formControlName="municipio"
+      id="municipio"
+      class="form-control"
+      placeholder="Municipio de la agencia"
+    >
+  </div>
+
+  <h2 class="fs-3">Dirección</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="colonia" class="form-label">Colonia</label>
+    
+        <input
+          type="text"
+          formControlName="colonia"
+          id="colonia"
+          [class]="campoObligatorio('colonia') ? 'border border-danger' : ''"
+    
+          class="form-control"
+          placeholder="Nombre de la colonia del cliente"
+        >
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="calle" class="form-label">Nombre de la Calle</label>
+    
+        <input
+          type="text"
+          formControlName="calle"
+          id="calle"
+          [class]="campoObligatorio('calle') ? 'border border-danger' : ''"
+    
+          class="form-control"
+          placeholder="Ingrese el nombre de la calle"
+        >
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="tiempoResidir" class="form-label">Tiempo de residir (Mes)</label>
+    
+        <input
+          type="number"
+          formControlName="tiempoResidir"
+          id="tiempoResidir"
+          [class]="campoObligatorio('tiempoResidir') ? 'border border-danger' : ''"
+    
+          class="form-control"
+          placeholder="Ingrese los meses que tiene viviendo en el domicilio"
+        >
+    
+        <span class="text-danger fw-bold" *ngIf="soloNumeros('tiempoResidir')">
+          Solo se permiten numeros
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="mb-3">
+        <label for="casa" class="form-label">Numero de la casa</label>
+    
+        <input
+          type="text"
+          formControlName="casa"
+          id="casa"
+          [class]="campoObligatorio('casa') ? 'border border-danger' : ''"
+          class="form-control"
+          placeholder="Ingrese el numero de la casa"
+        >
+    
+        <span class="text-danger fw-bold" *ngIf="soloNumeros('casa')">
+          No se permiten letras ni decimales
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="mb-3">
+        <label for="referencia" class="form-label">Referencia del domicilio</label>
+    
+        <textarea
+          formControlName="referencia"
+          id="referencia"
+          class="form-control"
+          placeholder="Ingrese referencias del domicilio"
+          id="referencia"
+          [class]="campoObligatorio('referencia') ? 'border border-danger' : ''"
+    
+          cols="30"
+          rows="5"
+          ></textarea>
+      </div>
+    </div>
+  </div>
+  
+
+  <h2 class="fs-3">Contacto</h2>
+  <div class="mb-3">
+    <label for="numero1" class="form-label">Numeros de celular</label>
+
+    <div class="row">
+      <div class="col-md-6">
+        <input
+          type="number"
+          formControlName="numeroCelular1"
+          id="numero1"
+          [class]="campoObligatorio('numeroCelular1') ? 'border border-danger' : ''"
+
+          class="form-control mb-3"
+          placeholder="Ingrese un numero de celular"
+        >
+        <span class="text-danger fw-bold" *ngIf="soloNumeros('numeroCelular1')">
+          Solo se permiten numeros
+        </span>
+      </div>
+
+      <div class="col-md-6">
+        <input
+          type="number"
+          formControlName="numeroCelular2"
+          id="numero2"
+          [class]="campoObligatorio('numeroCelular2') ? 'border border-danger' : ''"
+
+          class="form-control"
+          placeholder="Ingrese un numero de celular"
+        >
+        <span class="text-danger fw-bold" *ngIf="soloNumeros('numeroCelular2')">
+          Solo se permiten numeros
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="telefonoFijo" class="form-label">Telefono Fijo</label>
+    
+        <input
+          type="number"
+          formControlName="telefonoFijo"
+          id="telefonoFijo"
+          [class]="campoObligatorio('telefonoFijo') ? 'border border-danger' : ''"
+          class="form-control"
+          placeholder="Ingrese # telefono fijo"
+        >
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo Electronico</label>
+    
+        <input
+          type="email"
+          formControlName="correo"
+          id="correo"
+          class="form-control"
+          placeholder="Ingrese correo electronico"
+        >
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Datos del conyugue -->
+  <div *ngIf="mostrarOpcConyugue">
+    <h3 class="fs-2 my-3">Datos del conyugue</h3>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="nombreConyugue" class="form-label">Nombre</label>
+      
+          <input
+            type="text"
+            formControlName="nombreConyugue"
+            id="nombreConyugue"
+            class="form-control"
+            placeholder="Nombre del Conyugue">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="DNIConyugue" class="form-label">DNI</label>
+      
+          <input
+            type="text"
+            formControlName="DNI"
+            id="DNIConyugue"
+            class="form-control"
+            placeholder="DNI del Conyugue">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="lugarTrabajoConyugue" class="form-label">Lugar de trabajo</label>
+  
+      <input
+        type="text"
+        formControlName="lugarTrabajo"
+        id="lugarTrabajoConyugue"
+        class="form-control"
+        placeholder="Lugar de Trabajo del Conyugue">
+    </div>
+    
+    
+  </div>
+
+  <input 
+    class="btn btn-success float-end" type="submit"
+    value="Ingresar"
+    [disabled]="clienteForm.disabled"
+  />
+</form>
+
+
+<h5>touched</h5>
+<pre>
+  {{clienteForm.touched}}
+</pre>
+
+<h5>Form values</h5>
+<pre>
+  {{clienteForm.value | json}}
+</pre>
+
+<h5>DNI</h5>
+<pre>
+  {{clienteForm.controls.carnetOcedula.errors | json}}
+</pre>
+
+<h5>carnetOcedula</h5>
+<pre>
+  {{clienteForm.controls.carnetOcedula.errors | json}}
+</pre>

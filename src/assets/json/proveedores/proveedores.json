@@ -1,0 +1,57 @@
+{
+	"proveedor": [
+		{
+			"proveedor_id": 1,
+			"id_fiscal": "05019013619421",
+			"nombre": "Integraciones tecnologicas",
+			"pais_id": "1",
+			"pais": "Honduras",
+			"ciudad": "San Pedro Sula",
+			"moneda_id": 1,
+			"moneda": "Lempiras",
+			"codigo_postal": "21104",
+			"telefono_fijo": "25027524",
+			"telefono_movil": "25595381",
+			"direccion": "Blvd. del este",
+			"correo_electronico": "contacto@itgrahn.com",
+			"fax": "",
+			"credito_limite": "1000",
+			"credito_dias": "30",
+			"contactos":[
+				{"nombre":"Nombre contacto 1","telefono_fijo":"+50425502345","telefono_movil":"+50499991234","correo_electronico":"contacto1@empresa.com","area_responsable":"compras" },
+				{"nombre":"Nombre contacto 2","telefono_fijo":"+50425502345","telefono_movil":"+50499991234","correo_electronico":"contacto2@empresa.com","area_responsable":"pagos" }
+			],
+			"fecha_creacion":"2021-01-01",
+			"usuario_id":"1",
+			"usuario_creo":"Administrador"
+
+		}
+	],
+	"proveedor_informacion_crediticia": [
+		{"fecha":"2020-01-14","limite_credito":"100000","dias_credito":"30","usuario_id":1,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"200000","dias_credito":"60","usuario_id":2,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"300000","dias_credito":"90","usuario_id":3,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"400000","dias_credito":"99","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"400000","dias_credito":"99","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"400000","dias_credito":"99","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","limite_credito":"400000","dias_credito":"99","usuario_id":4,"usuario_nombre":"Usuario 1"}
+	],
+	"proveedor_historico_trx": [
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":1,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pendiente","usuario_id":2,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":3,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":4,"usuario_nombre":"Usuario 1"},
+		{"fecha":"2020-01-14","documento":"001-01-000001","dias_credito":"10","estado_documento":"Pagado","usuario_id":4,"usuario_nombre":"Usuario 1"}
+	],
+	
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}

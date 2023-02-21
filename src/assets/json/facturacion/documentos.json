@@ -1,0 +1,1087 @@
+{
+	"documentos": [
+		{
+      "documento_id": 1,
+      "documento_tipo_id": 2, 
+      "documento_tipo_nombre": "Cotizacion", 
+      "numero_cotizacion": "COT001",
+      "numero_factura": "001-01-001-00000678",
+			"exonerado_id": 1,
+			
+			"cai":"3232DE-5E77EF-EB4286-3E85E7-A4DB42-61",
+			"rango_autorizado":"Rango autorizado del 000-001-01-0001580 al 000-001-01-00016800",
+			"fecha_limite_emision":"01-09-2022",
+			
+			"estado_id": 1,
+			"estado": "aplicado",
+			"fecha_documento": "2022-11-15 19:48:12",
+			"fecha_vencimiento": "2022-12-15 19:48:12",
+			"dias_credito": 30,
+			"vendedor_id": 1,
+			"vendedor_nombre": "Vendedor 1",
+			
+			"cliente_id": 1,
+			"cliente_nombre": "Insumos textiles del Salvador S.A. de C.V.",
+			"direccion_entrega": "KM 4.5 Zona franca San Marcos bodega #1, San Marcos San Salvador",
+			
+			"subtotal": 					1000.00,
+
+			"importe_exento": 		900.00,
+			"importe_exonerado": 	900.00,
+			"importe_grabado":	  900.00,
+			"descuentos": 				0.00,
+			"impuesto_venta_15": 	0.00,
+			"impuesto_venta_18": 	0.00,
+
+			"total_documento": 		900.00,
+			"total_documento_letras": "Novecientos exactos",
+
+			"valor_fob": 					11030.08,
+			"flete": 							450.00,
+			"seguro": 						165.45,
+			"total_cif":					11645.53,
+			
+			"correlativo_orden_exenta": "R2022",
+			"correlativo_constancia_exonerado": "",
+			"registro_sag": "",
+
+			"kit_productos": [
+				{
+					"producto_id":1,
+					"codigo":"QM1050020",
+					"nombre":"CREMA ANTIBACTERIAL EVITER DE 60 ML",
+					"descripcion":"Caja de 60 unidades",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Cajas",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+			
+					"estado_id":"1",
+					"estado_nombre":"Activo",
+			
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":"1",
+					"usuario_creo":"Administrados",
+					
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":2,
+					"codigo":"COD 2",
+					"nombre":"Kit 2",
+					"descripcion":"Descripción de kit de producto 2",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":2,
+					"estado_nombre":"Inactivo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":3,
+					"codigo":"COD 3",
+					"nombre":"Kit 3",
+					"descripcion":"Descripción de kit de producto 3",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":4,
+					"codigo":"COD 4",
+					"nombre":"Kit 4",
+					"descripcion":"Descripción de kit de producto 4",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":5,
+					"codigo":"COD 5",
+					"nombre":"Kit 5",
+					"descripcion":"Descripción de kit de producto 5",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":6,
+					"codigo":"COD 6",
+					"nombre":"Kit 6",
+					"descripcion":"Descripción de kit de producto 6",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":7,
+					"codigo":"COD 7",
+					"nombre":"Kit 7",
+					"descripcion":"Descripción de kit de producto 7",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":8,
+					"codigo":"COD 8",
+					"nombre":"Kit 8",
+					"descripcion":"Descripción de kit de producto 8",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":9,
+					"codigo":"COD 9",
+					"nombre":"Kit 9",
+					"descripcion":"Descripción de kit de producto 9",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":1,
+					"codigo":"COD 10",
+					"nombre":"Kit 10",
+					"descripcion":"Descripción de kit de producto 10",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":1,
+					"codigo":"COD 11",
+					"nombre":"Kit 11",
+					"descripcion":"Descripción de kit de producto 11",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				}
+			]
+
+
+
+		},
+		{
+      "documento_id": 2,
+      "documento_tipo_id": 1, 
+      "documento_tipo_nombre": "Factura", 
+      "numero_cotizacion": "COT002",
+      "numero_factura": "001-01-001-00000679",
+			"exonerado": 2,
+
+			"cai":"3232DE-5E77EF-EB4286-3E85E7-A4DB42-61",
+			"rango_autorizado":"Rango autorizado del 000-001-01-0001580 al 000-001-01-00016800",
+			"fecha_limite_emision":"01-09-2022",
+			
+			"estado_id": 1,
+			"estado": "aplicado",
+			"fecha_documento": "2022-10-15 19:48:12",
+			"fecha_vencimiento": "2022-12-15 19:48:12",
+			"dias_credito": 30,
+			"vendedor_id": 1,
+			"vendedor_nombre": "Vendedor 2",
+			
+			"cliente_id": 2,
+			"cliente_nombre": "Cliente 2",
+			"direccion_entrega": "KM 4.5 Zona franca San Marcos bodega #1, San Marcos San Salvador",
+			
+			"subtotal": 					1000.00,
+
+			"importe_exento": 		900.00,
+			"importe_exonerado": 	900.00,
+			"importe_gravado":	  900.00,
+			"descuentos": 				0.00,
+			"impuesto_venta_15": 	0.00,
+			"impuesto_venta_18": 	0.00,
+
+			"total_documento": 		900.00,
+			"total_documento_letras": "Novecientos exactos",
+
+			"valor_fob": 					11030.08,
+			"flete": 							450.00,
+			"seguro": 						165.45,
+			"total_cif":					11645.53,
+			
+			"correlativo_orden_exenta": "R2022",
+			"correlativo_constancia_exonerado": "",
+			"registro_sag": "",
+
+			"kit_productos": [
+				{
+					"producto_id":1,
+					"codigo":"QM1050020",
+					"nombre":"CREMA ANTIBACTERIAL EVITER DE 60 ML",
+					"descripcion":"Caja de 60 unidades",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Cajas",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+			
+					"estado_id":"1",
+					"estado_nombre":"Activo",
+			
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":"1",
+					"usuario_creo":"Administrados",
+					
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":2,
+					"codigo":"COD 2",
+					"nombre":"Kit 2",
+					"descripcion":"Descripción de kit de producto 2",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":2,
+					"estado_nombre":"Inactivo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":3,
+					"codigo":"COD 3",
+					"nombre":"Kit 3",
+					"descripcion":"Descripción de kit de producto 3",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+					
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":4,
+					"codigo":"COD 4",
+					"nombre":"Kit 4",
+					"descripcion":"Descripción de kit de producto 4",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":5,
+					"codigo":"COD 5",
+					"nombre":"Kit 5",
+					"descripcion":"Descripción de kit de producto 5",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":6,
+					"codigo":"COD 6",
+					"nombre":"Kit 6",
+					"descripcion":"Descripción de kit de producto 6",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":7,
+					"codigo":"COD 7",
+					"nombre":"Kit 7",
+					"descripcion":"Descripción de kit de producto 7",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":8,
+					"codigo":"COD 8",
+					"nombre":"Kit 8",
+					"descripcion":"Descripción de kit de producto 8",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":9,
+					"codigo":"COD 9",
+					"nombre":"Kit 9",
+					"descripcion":"Descripción de kit de producto 9",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":1,
+					"codigo":"COD 10",
+					"nombre":"Kit 10",
+					"descripcion":"Descripción de kit de producto 10",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				},
+				{
+					"producto_id":1,
+					"codigo":"COD 11",
+					"nombre":"Kit 11",
+					"descripcion":"Descripción de kit de producto 11",
+					"categoria_id":1,
+					"categoria_nombre":"Categoría 1",
+					"presentacion_id":1,
+					"presentacion_nombre":"Galón",
+					"stock_minimo":1,
+					"stock_actual":1,
+
+					"cantidad":10,
+
+					"precio_venta":50,
+					"precio_costo":25,
+
+					"total_venta_producto":500,
+
+					"estado_id":1,
+					"estado_nombre":"Activo",
+					"fecha_creacion":"2021-01-01",
+					"usuario_id":1,
+					"usuario_creo":"Administrados",
+					"productos":[
+						{
+							"producto_id":1,
+							"codigo":"PROD1",
+							"nombre":"Código producto 1",
+							"descripcion":"Descripción producto 1",
+							"categoria_id":1,
+							"presentacion_nombre":"Galón"
+						},
+						{
+							"producto_id":2,
+							"codigo":"PROD2",
+							"nombre":"Código producto 2",
+							"descripcion":"Descripción producto 2",
+							"categoria_id":1,
+							"categoria_nombre":"Categoría 1",
+							"presentacion_nombre":"Galón"
+						}
+					]
+				}
+			]
+		}
+	],
+	"paginacionResultados": [
+		{
+			"length": 11,
+			"pageIndex": 0,
+			"pageSize": 10,
+			"previousPageIndex": 0
+		}
+	]
+}
