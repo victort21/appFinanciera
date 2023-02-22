@@ -4,25 +4,29 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { ClientesRoutingModule } from './clientes-routing.module';
-import { ClienteNuevoComponent } from './pages/cliente-nuevo/cliente-nuevo.component';
+import { ClienteNuevoComponent } from './pages/nuevoCliente/cliente-nuevo/cliente-nuevo.component';
 import { MaterialModule } from '../shared/material/material.module';
-import { TabsComponent } from './components/tabs/tabs.component';
-import { AvalComponent } from './pages/aval/aval.component';
-import { GarantiasComponent } from './pages/garantias/garantias.component';
-import { DocumentacionComponent } from './pages/documentacion/documentacion.component';
-import { CreditoComponent } from './pages/credito/credito.component';
-import { CalculoCuotaComponent } from './pages/calculo-cuota/calculo-cuota.component';
+import { AvalComponent } from './pages/nuevoCliente/aval/aval.component';
+import { GarantiasComponent } from './pages/nuevoCliente/garantias/garantias.component';
+import { DocumentacionComponent } from './pages/nuevoCliente/documentacion/documentacion.component';
+import { CreditoComponent } from './pages/nuevoCliente/credito/credito.component';
+import { CalculoCuotaComponent } from './pages/nuevoCliente/calculo-cuota/calculo-cuota.component';
+import { ListadoComponent } from './listado/listado.component';
+import { HomeComponent } from './components/home/home.component';
+import { NuevoCreditoComponent } from './components/tabsNuevoCliente/nuevo-credito.component';
 
 
 @NgModule({
   declarations: [
     ClienteNuevoComponent,
-    TabsComponent,
     AvalComponent,
     GarantiasComponent,
     DocumentacionComponent,
     CreditoComponent,
-    CalculoCuotaComponent
+    CalculoCuotaComponent,
+    HomeComponent,
+    ListadoComponent,
+    NuevoCreditoComponent
   ],
   imports: [
     CommonModule,

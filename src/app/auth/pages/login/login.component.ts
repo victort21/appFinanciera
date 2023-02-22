@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
     }
 
     localStorage.setItem('token', '123456789');
-    this.router.navigateByUrl('/clientes/nuevo');
+    this.router.navigateByUrl('/clientes/listado');
 
     console.log(this.authForm.value);
   }

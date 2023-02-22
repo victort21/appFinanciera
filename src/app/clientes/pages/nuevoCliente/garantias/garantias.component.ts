@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Lista } from '../../interfaces';
-import { ClienteService } from '../../services/cliente.service';
-import { ValidatorService } from '../../services/validator.service';
+import { Lista } from '../../../interfaces';
+import { ClienteService } from '../../../services/cliente.service';
+import { ValidatorService } from '../../../services/validator.service';
 
 
 @Component({

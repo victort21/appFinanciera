@@ -1,17 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './components/home/home.component';
-import { TabsComponent } from './components/tabs/tabs.component';
-import { ClienteNuevoComponent } from './pages/cliente-nuevo/cliente-nuevo.component';
+import { NuevoCreditoComponent } from './components/tabsNuevoCliente/nuevo-credito.component';
+import { ListadoComponent } from './listado/listado.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: TabsComponent,
+    component: HomeComponent,
     children: [
       {
         path: 'nuevo',
-        component: ClienteNuevoComponent,
+        component: NuevoCreditoComponent,
+      },
+      {
+        path: 'listado',
+        component: ListadoComponent,
+      },
+      {
+        path: '**',
+        redirectTo: 'listado'
       }
     ]
   }

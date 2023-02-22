@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { pattern } from '../../interfaces/validator';
-import { ClienteService } from '../../services/cliente.service';
-import { ValidatorService } from '../../services/validator.service';
+import { pattern } from '../../../interfaces/validator';
+import { ClienteService } from '../../../services/cliente.service';
+import { ValidatorService } from '../../../services/validator.service';
 
 @Component({
   selector: 'app-cliente-nuevo',

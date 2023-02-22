@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { ClienteService } from '../../services/cliente.service';
-import { ValidatorService } from '../../services/validator.service';
+import { ClienteService } from '../../../services/cliente.service';
+import { ValidatorService } from '../../../services/validator.service';
 
 
 @Component({
