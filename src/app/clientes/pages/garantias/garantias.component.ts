@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { pattern } from '../../interfaces/validator';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClienteService } from '../../services/cliente.service';
 import { ValidatorService } from '../../services/validator.service';
+
+interface Lista {
+  articulo: string | null | undefined
+  valor: string | null | undefined
+  imagenes?: string[]
+}
 
 @Component({
   selector: 'app-garantias',
@@ -11,14 +16,50 @@ import { ValidatorService } from '../../services/validator.service';
 export class GarantiasComponent {
 
   images: string[] = [];
+  lista: Lista[] = [];
 
-  garantiaForm = this.fb.group({
-    nombreArticulo: ['', [ Validators.required ] ],
-    precioArticulo: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
-  });
 
-  constructor(private fb: FormBuilder, public vs: ValidatorService,
-              public clienteService: ClienteService) {}
+  constructor(public vs: ValidatorService, public clienteService: ClienteService,
+              private _snackBar: MatSnackBar) {}
+
+  agregarALista() {
+    const formValues = this.clienteService.formularioCliente;
+
+    if(!formValues.value.nombreArticulo || !formValues.value.precioArticulo) {
+      this._snackBar.open('Completa los campos para agregar una garantia', 'Ok', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    if(this.images.length === 0) {
+      this._snackBar.open('Agrega al menos una foto de la garantia', 'Ok', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    this.lista.push({
+      articulo: formValues.value.nombreArticulo,
+      valor: formValues.value.precioArticulo,
+      imagenes: this.images,
+    });
+
+    formValues.controls.nombreArticulo.setValue('');
+    formValues.controls.precioArticulo.setValue('');
+    this.images = [];
+  }
+
+  validarForm() {
+    if(this.lista.length === 0) {
+      this._snackBar.open('Agrega al menos una garantia', 'Cerrar', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    this.clienteService.selectTab(3);
+  }
 
   foto(e: any) {
     const file = e.target.files[0];
