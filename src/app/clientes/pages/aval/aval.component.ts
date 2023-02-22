@@ -96,7 +96,7 @@ export class AvalComponent {
       !formValues.avalCalle.value || !formValues.avalMunicipio.value || !formValues.avalCasa.value ||
       !formValues.avalReferencia.value || !formValues.avalCelular.value ||!formValues.avalTelefonoFijo.value
 
-    if(!this.avalOpc) {
+    if(this.opcional) {
       if(validation) {
         formValues.avalCedula.markAsTouched();
         formValues.avalNombres.markAsTouched();

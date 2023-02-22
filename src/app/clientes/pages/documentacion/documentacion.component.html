@@ -95,24 +95,24 @@
     </div>
   </div>
 
-  <div class="row mt-5">
-    <div class="col-sm-6">
+  <div class="d-flex justify-content-between mt-5">
+    <div>
       <button
         type="button"
-        class="btn btn-success w-100"
+        class="btn btn-success"
         (click)="clienteService.selectTab(2)"
       >
-        Anterior
+        {{'<'}}
       </button>
     </div>
   
-    <div class="col-sm-6">
+    <div>
       <button
         type="button"
-        class="btn btn-success mt-2 mt-sm-0 w-100"
+        class="btn btn-success mt-2"
         (click)="validarForm()"
       >
-        Siguiente
+        {{'>'}}
       </button>
     </div>
    </div>
