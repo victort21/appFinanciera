@@ -180,6 +180,10 @@ export class ClienteNuevoComponent implements OnInit{
 
   cambiarLabel(e: any) {
     this.label = e.target.value;
+
+    if(this.clienteService.formularioCliente.value.identificacion) {
+      this.clienteService.formularioCliente.controls.carnetOcedula.enable();
+    }
   }
 
 }

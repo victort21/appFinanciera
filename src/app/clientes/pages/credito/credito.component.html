@@ -1,17 +1,12 @@
 <form class="bg-white w-lg-75 p-3 mx-auto mt-3" [formGroup]="clienteService.formularioCliente">
   <div class="mb-3">
     <label for="producto" class="form-label">Producto</label>
-    <select
-      id="producto"
-      class="form-select"
-      aria-label="Select productos"
+    <input
+      type="text"
       formControlName="producto"
-      [class]="vs.campoObligatorio('producto', clienteService.formularioCliente) ? 'border border-danger' : ''"
+      id="producto"
+      class="form-control"
     >
-      <option selected disabled value="">--Seleccione--</option>
-      <option value="microfondo">Microfondo</option>
-      <option value="producto">Productos...</option>
-    </select>
 
   </div>
 

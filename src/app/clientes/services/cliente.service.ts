@@ -13,7 +13,7 @@ export class ClienteService {
   formularioCliente = this.fb.group({
     //DATOS GENERALES
     identificacion: ['', [Validators.required] ],
-    carnetOcedula: ['', [Validators.required, Validators.pattern(pattern.numeros)  ] ],
+    carnetOcedula: [{value: '', disabled: true}, [Validators.required, Validators.pattern(pattern.numeros)  ] ],
     nombres: ['', [Validators.required, Validators.pattern(pattern.nombres) ]  ],
     primerApellido: ['', [Validators.required, Validators.pattern(pattern.letras) ] ],
     segundoApellido: ['', [Validators.required, Validators.pattern(pattern.letras) ] ],
@@ -56,7 +56,7 @@ export class ClienteService {
     //DOCUMENTACION
     tipoDocumentacion: ['', [ Validators.required ] ],
     //CREDITO
-    producto: ['', [ Validators.required ] ],
+    producto: [{value: 'Microfondo', disabled: true}, [ Validators.required ] ],
     periodicidad: ['', [ Validators.required ] ],
     monto: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
     plazo: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
