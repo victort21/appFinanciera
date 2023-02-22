@@ -438,10 +438,13 @@
     
   </div>
 
-  <input 
-    class="btn btn-success float-end" type="submit"
-    value="Siguiente"
-  />
+  <button
+    type="button"
+    class="btn btn-success float-end"
+    (click)="clienteService.selectTab(1)"
+  >
+    Siguiente
+  </button>
 </form>
 
 

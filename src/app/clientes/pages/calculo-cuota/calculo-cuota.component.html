@@ -1,1 +1,59 @@
-<p>calculo-cuota works!</p>
+<section class="bg-white w-lg-75 p-3 mx-auto mt-3">
+  <div class="row">
+    <div class="col-sm-6 text-center text-md-start">
+      <div class="mb-3">
+        <label for="capital" class="form-label">Capital</label>
+
+        <p class="fs-1 fw-bold">{{clienteService.formularioCliente.value.monto | number:'1.2-2' }}</p>
+      </div>
+    </div>
+
+    <div class="col-sm-6 text-center text-md-start">
+      <div class="mb-3">
+        <label for="capital" class="form-label">Plazo</label>
+
+        <p class="fs-1 fw-bold">{{clienteService.formularioCliente.value.plazo + ' Meses'}}</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6 text-center text-md-start">
+      <div class="mb-3">
+        <label for="capital" class="form-label">Periodicidad</label>
+
+        <p class="fs-1 fw-bold">{{clienteService.formularioCliente.value.periodicidad | titlecase }}</p>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center text-md-start">
+      <div class="mb-3">
+        <label for="cuotas" class="form-label">Numero de cuotas</label>
+
+        <p class="fs-1 fw-bold">{{clienteService.formularioCliente.controls.numeroCuotas.value }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 text-center text-md-start">
+      <input type="submit" value="Calcular cuota" class="btn btn-success">
+    </div>
+    <div class="col-sm-6 text-center text-md-start">
+      <label class="form-label">Monto de cuota</label>
+      <p class="fs-1 fw-bold">165</p>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <button
+        type="button"
+        class="btn btn-success w-100"
+        (click)="clienteService.selectTab(4)"
+      >
+        Anterior
+      </button>
+    </div>
+   </div>
+
+</section>

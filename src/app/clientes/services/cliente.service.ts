@@ -8,6 +8,7 @@ import { pattern } from '../interfaces/validator';
   providedIn: 'root'
 })
 export class ClienteService {
+  selectedIndex = 0;
 
   formularioCliente = this.fb.group({
     //DATOS GENERALES
@@ -63,4 +64,9 @@ export class ClienteService {
   });
 
   constructor(private fb: FormBuilder) { }
+
+  selectTab(i: number): void {
+    this.selectedIndex = i;
+    console.log(this.selectedIndex);
+  }
 }

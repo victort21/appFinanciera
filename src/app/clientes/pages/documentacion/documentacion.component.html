@@ -30,8 +30,26 @@
 
   </div>
 
-</form>
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <button
+        type="button"
+        class="btn btn-success w-100"
+        (click)="clienteService.selectTab(2)"
+      >
+        Anterior
+      </button>
+    </div>
+  
+    <div class="col-sm-6">
+      <button
+        type="button"
+        class="btn btn-success mt-2 mt-sm-0 w-100"
+        (click)="clienteService.selectTab(4)"
+      >
+        Siguiente
+      </button>
+    </div>
+   </div>
 
-<pre>
-  {{clienteService.formularioCliente.value | json}}
-</pre>
+</form>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class TabsComponent {
 
+
+  constructor(public clienteService: ClienteService) {}
 }

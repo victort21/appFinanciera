@@ -303,7 +303,27 @@
 
   </div>
 
-  <input type="submit" value="Verificar" class="btn-btn-primary">
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <button
+        type="button"
+        class="btn btn-success w-100"
+        (click)="clienteService.selectTab(0)"
+      >
+        Anterior
+      </button>
+    </div>
+  
+    <div class="col-sm-6">
+      <button
+        type="button"
+        class="btn btn-success mt-2 mt-sm-0 w-100"
+        (click)="clienteService.selectTab(2)"
+      >
+        Siguiente
+      </button>
+    </div>
+   </div>
   
 </form>
 
