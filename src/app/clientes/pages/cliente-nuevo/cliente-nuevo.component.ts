@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { pattern } from '../../interfaces/validator';
 import { ClienteService } from '../../services/cliente.service';
+import { ValidatorService } from '../../services/validator.service';
 
 @Component({
   selector: 'app-cliente-nuevo',
@@ -41,12 +42,6 @@ export class ClienteNuevoComponent implements OnInit{
     },
   ]
 
-  
-
-  campoObligatorio(campo: string) {
-    return this.formularioClienteService.get(campo)?.errors && this.formularioClienteService.get(campo)?.touched 
-  }
-
   get errorCarnetCedula(): string {
     if(this.formularioClienteService.controls.carnetOcedula.errors?.['pattern']) {
       return 'No se permiten letras'
@@ -76,10 +71,10 @@ export class ClienteNuevoComponent implements OnInit{
     }
   }
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar,
-              public clienteService: ClienteService) {}
+              public clienteService: ClienteService, public validator: ValidatorService) {}
   ngOnInit(): void {
-    this.formularioClienteService.controls.identificacion.setValue('cedula');
-    this.formularioClienteService.controls.carnetOcedula.setValue('0512200201594');
+    // this.formularioClienteService.controls.identificacion.setValue('cedula');
+    // this.formularioClienteService.controls.carnetOcedula.setValue('0512200201594');
     this.formularioClienteService.controls.nombres.setValue('Victor Miguel');
     this.formularioClienteService.controls.primerApellido.setValue('Torres');
     this.formularioClienteService.controls.segundoApellido.setValue('Quintanilla');

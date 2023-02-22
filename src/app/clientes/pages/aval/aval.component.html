@@ -31,7 +31,7 @@
       type="text"
       formControlName="avalNombres"
       id="nombres"
-      [class]="validator.campoObligatorio('nombres', clienteService.formularioCliente) ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('avalNombres', clienteService.formularioCliente) ? 'border border-danger' : ''"
       class="form-control"
       placeholder="Nombres del cliente"
     >
@@ -50,7 +50,7 @@
           type="text"
           formControlName="avalPrimerApellido"
           id="primerApellido"
-          [class]="validator.campoObligatorio('primerApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalPrimerApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Primer Apellido del cliente"
         >
@@ -69,7 +69,7 @@
           type="text"
           formControlName="avalSegundoApellido"
           id="segundoApellido"
-          [class]="validator.campoObligatorio('segundoApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalSegundoApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Segundo Apellido del cliente"
         >
@@ -89,7 +89,7 @@
       id="cedula"
       formControlName="avalCedula"
       class="form-control"
-      [class]="validator.campoObligatorio('cedula', clienteService.formularioCliente) ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('avalCedula', clienteService.formularioCliente) ? 'border border-danger' : ''"
       placeholder="Ingrese el numero de identidad"
     >
 
@@ -109,7 +109,7 @@
           id="municipio"
           formControlName="avalMunicipio"
           class="form-control"
-          [class]="validator.campoObligatorio('municipio', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalMunicipio', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
     
@@ -128,7 +128,7 @@
           id="colonia"
           formControlName="avalColonia"
           class="form-control"
-          [class]="validator.campoObligatorio('colonia', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalColonia', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
       </div>
@@ -143,7 +143,7 @@
           id="calle"
           formControlName="avalCalle"
           class="form-control"
-          [class]="validator.campoObligatorio('calle', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalCalle', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de identidad"
         >
 
@@ -162,7 +162,7 @@
           id="casa"
           formControlName="avalCasa"
           class="form-control"
-          [class]="validator.campoObligatorio('casa', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalCasa', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de casa"
         >
         <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'casa')">
@@ -177,7 +177,7 @@
         <textarea
           formControlName="avalReferencia"
           class="form-control"
-          [class]="validator.campoObligatorio('referencia', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalReferencia', clienteService.formularioCliente) ? 'border border-danger' : ''"
           id="referencia"
           rows="5"
           placeholder="Ingrese una referencia del domicilio"
@@ -198,7 +198,7 @@
             id="celular"
             formControlName="avalCelular"
             class="form-control"
-            [class]="validator.campoObligatorio('celular', clienteService.formularioCliente) ? 'border border-danger' : ''"
+            [class]="validator.campoObligatorio('avalCelular', clienteService.formularioCliente) ? 'border border-danger' : ''"
             placeholder="Ingrese el numero de celular"
           >
           <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'celular')">
@@ -217,7 +217,7 @@
           id="telefonoFijo"
           formControlName="avalTelefonoFijo"
           class="form-control"
-          [class]="validator.campoObligatorio('telefonoFijo', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalTelefonoFijo', clienteService.formularioCliente) ? 'border border-danger' : ''"
           placeholder="Ingrese el numero de telefonoFijo"
         >
         <span class="text-danger fw-bold" *ngIf="validator.validarPattern(clienteService.formularioCliente, 'telefonoFijo')">
@@ -238,7 +238,7 @@
             type="date"
             formControlName="avalFechaNac"
             id="fechaNac"
-            [class]="validator.campoObligatorio('fechaNac', clienteService.formularioCliente) ? 'border border-danger' : ''"
+            [class]="validator.campoObligatorio('avalFechaNac', clienteService.formularioCliente) ? 'border border-danger' : ''"
             class="form-control"
           >
         </div>
@@ -289,7 +289,7 @@
         <select
           id="estadoCivil"
           class="form-select"
-          [class]="validator.campoObligatorio('estadoCivil', clienteService.formularioCliente) ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('avalEstadoCivil', clienteService.formularioCliente) ? 'border border-danger' : ''"
           aria-label="Select estado civil"
           formControlName="avalEstadoCivil"
         >
@@ -318,7 +318,7 @@
       <button
         type="button"
         class="btn btn-success mt-2 mt-sm-0 w-100"
-        (click)="clienteService.selectTab(2)"
+        (click)="validarForm()"
       >
         Siguiente
       </button>

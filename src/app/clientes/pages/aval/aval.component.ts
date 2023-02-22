@@ -88,6 +88,37 @@ export class AvalComponent {
     }
   }
 
+  validarForm() {
+    const formValues = this.clienteService.formularioCliente.controls;
+    const validation = !formValues.avalCedula.value || !formValues.avalNombres.value ||
+      !formValues.avalPrimerApellido.value || !formValues.avalSegundoApellido.value ||
+      !formValues.avalFechaNac.value || !formValues.avalEstadoCivil.value || !formValues.avalColonia.value ||
+      !formValues.avalCalle.value || !formValues.avalMunicipio.value || !formValues.avalCasa.value ||
+      !formValues.avalReferencia.value || !formValues.avalCelular.value ||!formValues.avalTelefonoFijo.value
+
+    if(validation) {
+      formValues.avalCedula.markAsTouched();
+      formValues.avalNombres.markAsTouched();
+      formValues.avalPrimerApellido.markAsTouched();
+      formValues.avalSegundoApellido.markAsTouched();
+      formValues.avalFechaNac.markAsTouched();
+      formValues.avalEstadoCivil.markAsTouched();
+      formValues.avalColonia.markAsTouched();
+      formValues.avalCalle.markAsTouched();
+      formValues.avalCasa.markAsTouched();
+      formValues.avalReferencia.markAsTouched();
+      formValues.avalCelular.markAsTouched();
+      formValues.avalTelefonoFijo.markAsTouched();
+
+      this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    this.clienteService.selectTab(2);
+  }
+
   agregarCliente() {
     const formulario = this.clienteService.formularioCliente;
 

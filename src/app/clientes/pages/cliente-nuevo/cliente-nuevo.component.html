@@ -21,7 +21,7 @@
               aria-label="Select to DNI or Residencia"
               formControlName="identificacion"
               (change)="cambiarLabel($event)"
-              [class]="campoObligatorio('identificacion') ? 'border border-danger' : ''"
+              [class]="validator.campoObligatorio('identificacion', clienteService.formularioCliente) ? 'border border-danger' : ''"
             >
               <option selected disabled value="">--Seleccione--</option>
               <option value="cedula">Cedula de identidad</option>
@@ -44,7 +44,7 @@
         <input
           type="number"
           id="text"
-          [class]="campoObligatorio('carnetOcedula') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('carnetOcedula', clienteService.formularioCliente) ? 'border border-danger' : ''"
           formControlName="carnetOcedula"
           class="form-control"
           [placeholder]="placeholder"
@@ -65,7 +65,7 @@
       type="text"
       formControlName="nombres"
       id="nombres"
-      [class]="campoObligatorio('nombres') ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('nombres', clienteService.formularioCliente) ? 'border border-danger' : ''"
 
       class="form-control"
       placeholder="Nombres del cliente"
@@ -85,7 +85,7 @@
           type="text"
           formControlName="primerApellido"
           id="primerApellido"
-          [class]="campoObligatorio('primerApellido') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('primerApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Primer Apellido del cliente">
       </div>
@@ -99,7 +99,7 @@
           type="text"
           formControlName="segundoApellido"
           id="segundoApellido"
-          [class]="campoObligatorio('segundoApellido') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('segundoApellido', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           class="form-control"
           placeholder="Segundo Apellido del cliente"
@@ -144,7 +144,7 @@
           type="date"
           formControlName="fechaNac"
           id="fechaNac"
-          [class]="campoObligatorio('fechaNac') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('fechaNac', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
         >
       </div>
@@ -160,7 +160,7 @@
         <select
           id="estadoCivil"
           class="form-select"
-          [class]="campoObligatorio('estadoCivil') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('estadoCivil', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           aria-label="Select estado civil"
           formControlName="estadoCivil"
@@ -181,7 +181,7 @@
           id="residencia"
           class="form-select"
           formControlName="residencia"
-          [class]="campoObligatorio('residencia') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('residencia', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
         >
           <option selected disabled value="">--Seleccione--</option>
@@ -202,7 +202,7 @@
       type="number"
       formControlName="dependientes"
       id="dependientes"
-      [class]="campoObligatorio('dependientes') ? 'border border-danger' : ''"
+      [class]="validator.campoObligatorio('dependientes', clienteService.formularioCliente) ? 'border border-danger' : ''"
       class="form-control"
       placeholder="Numero de dependientes del cliente"
     >
@@ -234,7 +234,7 @@
           type="text"
           formControlName="colonia"
           id="colonia"
-          [class]="campoObligatorio('colonia') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('colonia', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           class="form-control"
           placeholder="Nombre de la colonia del cliente"
@@ -250,7 +250,7 @@
           type="text"
           formControlName="calle"
           id="calle"
-          [class]="campoObligatorio('calle') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('calle', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           class="form-control"
           placeholder="Ingrese el nombre de la calle"
@@ -266,7 +266,7 @@
           type="number"
           formControlName="tiempoResidir"
           id="tiempoResidir"
-          [class]="campoObligatorio('tiempoResidir') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('tiempoResidir', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           class="form-control"
           placeholder="Ingrese los meses que tiene viviendo en el domicilio"
@@ -288,7 +288,7 @@
           type="text"
           formControlName="casa"
           id="casa"
-          [class]="campoObligatorio('casa') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('casa', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Ingrese el numero de la casa"
         >
@@ -309,7 +309,7 @@
           class="form-control"
           placeholder="Ingrese referencias del domicilio"
           id="referencia"
-          [class]="campoObligatorio('referencia') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('referencia', clienteService.formularioCliente) ? 'border border-danger' : ''"
     
           cols="30"
           rows="5"
@@ -329,7 +329,7 @@
           type="number"
           formControlName="numeroCelular1"
           id="numero1"
-          [class]="campoObligatorio('numeroCelular1') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('numeroCelular1', clienteService.formularioCliente) ? 'border border-danger' : ''"
 
           class="form-control mb-3"
           placeholder="Ingrese un numero de celular"
@@ -344,7 +344,7 @@
           type="number"
           formControlName="numeroCelular2"
           id="numero2"
-          [class]="campoObligatorio('numeroCelular2') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('numeroCelular2', clienteService.formularioCliente) ? 'border border-danger' : ''"
 
           class="form-control"
           placeholder="Ingrese un numero de celular"
@@ -366,7 +366,7 @@
           type="number"
           formControlName="telefonoFijo"
           id="telefonoFijo"
-          [class]="campoObligatorio('telefonoFijo') ? 'border border-danger' : ''"
+          [class]="validator.campoObligatorio('telefonoFijo', clienteService.formularioCliente) ? 'border border-danger' : ''"
           class="form-control"
           placeholder="Ingrese # telefono fijo"
         >
