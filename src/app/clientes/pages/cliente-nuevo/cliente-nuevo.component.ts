@@ -130,6 +130,41 @@ export class ClienteNuevoComponent implements OnInit{
     return false;
   }
 
+  validarForm() {
+    const formValues = this.clienteService.formularioCliente.controls;
+    const validation = !formValues.carnetOcedula.value || !formValues.nombres.value || !formValues.primerApellido.value ||
+      !formValues.segundoApellido.value || !formValues.fechaNac.value || 
+      !formValues.estadoCivil.value || !formValues.residencia.value || !formValues.dependientes.value ||
+      !formValues.colonia.value || !formValues.calle.value || !formValues.tiempoResidir.value || 
+      !formValues.casa.value || !formValues.referencia.value || !formValues.numeroCelular1.value ||
+      !formValues.telefonoFijo.value
+
+    if(validation) {
+      formValues.carnetOcedula.markAsTouched();
+      formValues.nombres.markAsTouched();
+      formValues.primerApellido.markAsTouched();
+      formValues.segundoApellido.markAsTouched();
+      formValues.fechaNac.markAsTouched();
+      formValues.estadoCivil.markAsTouched();
+      formValues.residencia.markAsTouched();
+      formValues.dependientes.markAsTouched();
+      formValues.colonia.markAsTouched();
+      formValues.calle.markAsTouched();
+      formValues.tiempoResidir.markAsTouched();
+      formValues.casa.markAsTouched();
+      formValues.referencia.markAsTouched();
+      formValues.numeroCelular1.markAsTouched();
+      formValues.telefonoFijo.markAsTouched();
+
+      this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    this.clienteService.selectTab(1);
+  }
+
   agregarCliente() {
     // if(this.clienteForm.invalid) {
     //   this.clienteForm.markAllAsTouched();
