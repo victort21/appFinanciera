@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Lista } from '../../interfaces';
 import { ClienteService } from '../../services/cliente.service';
 import { ValidatorService } from '../../services/validator.service';
 
-interface Lista {
-  articulo: string | null | undefined
-  valor: string | null | undefined
-  imagenes?: string[]
-}
 
 @Component({
   selector: 'app-garantias',
