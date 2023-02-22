@@ -22,12 +22,77 @@
 
   <div class="row">
     <div class="col-md-4">
-      <input type="file" capture="camera" accept="image/*" class="d-none" #camara>
-      <button type="button" class="me-3 d-md-none" (click)="camara.click()">camara</button>
-      <button type="button" class="me-3">Nuevo</button>
-      <button type="button" class="me-3">Lista</button>
+      <input
+        type="file"
+        capture="camera"
+        accept="image/*"
+        class="d-none" #camara
+        (change)="foto($event)"
+      >
+      <button
+        type="button"
+        class="me-3 btn btn-info d-md-none"
+        (click)="camara.click()"
+        [disabled]="images.length === 3"
+      >
+        camara
+      </button>
+
+      <button
+        type="button"
+        class="me-3 btn btn-info"
+        (click)="agregarALista()"
+      >
+        Agregar
+      </button>
     </div>
 
+  </div>
+
+  <div>
+    <p *ngIf="images.length" class="mt-2 fw-bold">imagenes</p>
+
+    <div
+      class="d-flex gap-2 d-md-none"
+    >
+      <div
+        *ngFor="let imagen of images; let i = index"
+        class=""
+      >
+        <img
+          [src]="imagen"
+          alt="imagen producto"
+          class="img-fluid mb-3"
+        >
+        <p class="fs-1 text-danger fw-bold" (click)="borrar(i)">X</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="lista.length" class="d-md-none">
+    <p class="text-center mt-4 mb-0 fw-bold fs-2 text-md-start">Garantias</p>
+
+    <div *ngFor="let docs of lista ">
+      <p class="mt-3 mb-1">
+        Tipo:
+        <span class="fw-bold">
+          {{ docs.tipo === 'aviso_privacidad' ? 'Servicios de privacidad' : 
+          docs.tipo === 'servicios_basicos' ? 'Servicios Basicos' : 'Buro de credito' }}
+        </span>
+      </p>
+  
+      <div class="d-flex gap-2 d-md-none">
+        <div
+          *ngFor="let imagen of docs.imagenes; let i = index"
+        >
+          <img
+            [src]="imagen"
+            alt="imagen producto"
+            class="img-fluid mb-3"
+          >
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row mt-5">
@@ -45,7 +110,7 @@
       <button
         type="button"
         class="btn btn-success mt-2 mt-sm-0 w-100"
-        (click)="clienteService.selectTab(4)"
+        (click)="validarForm()"
       >
         Siguiente
       </button>
