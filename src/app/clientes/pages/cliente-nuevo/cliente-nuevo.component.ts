@@ -85,7 +85,6 @@ export class ClienteNuevoComponent implements OnInit{
     this.formularioClienteService.controls.colonia.setValue('colonia cliente');
     this.formularioClienteService.controls.calle.setValue('calle cliente');
     this.formularioClienteService.controls.tiempoResidir.setValue('200');
-    this.formularioClienteService.controls.residencia.setValue('200');
     this.formularioClienteService.controls.casa.setValue('21');
     this.formularioClienteService.controls.referencia.setValue('referencia domicilio cliente');
     this.formularioClienteService.controls.numeroCelular1.setValue('99152520');
@@ -101,7 +100,6 @@ export class ClienteNuevoComponent implements OnInit{
     this.formularioClienteService.controls.avalColonia.setValue('aval colonia');
     this.formularioClienteService.controls.avalCalle.setValue('aval calle');
     this.formularioClienteService.controls.avalCasa.setValue('21');
-    this.formularioClienteService.controls.avalCasa.setValue('aval casa');
     this.formularioClienteService.controls.avalReferencia.setValue('referencia aval domicilio');
     this.formularioClienteService.controls.avalCelular.setValue('99152520');
     this.formularioClienteService.controls.avalTelefonoFijo.setValue('2541254');
@@ -127,7 +125,7 @@ export class ClienteNuevoComponent implements OnInit{
 
   validarForm() {
     const formValues = this.clienteService.formularioCliente.controls;
-    const validation = !formValues.carnetOcedula.value || !formValues.nombres.value || !formValues.primerApellido.value ||
+    const validation = !formValues.identificacion.value || !formValues.carnetOcedula.value || !formValues.nombres.value || !formValues.primerApellido.value ||
       !formValues.segundoApellido.value || !formValues.fechaNac.value || 
       !formValues.estadoCivil.value || !formValues.residencia.value || !formValues.dependientes.value ||
       !formValues.colonia.value || !formValues.calle.value || !formValues.tiempoResidir.value || 
@@ -135,6 +133,7 @@ export class ClienteNuevoComponent implements OnInit{
       !formValues.telefonoFijo.value
 
     if(validation) {
+      formValues.identificacion.markAsTouched();
       formValues.carnetOcedula.markAsTouched();
       formValues.nombres.markAsTouched();
       formValues.primerApellido.markAsTouched();
@@ -158,24 +157,6 @@ export class ClienteNuevoComponent implements OnInit{
     }
 
     this.clienteService.selectTab(1);
-  }
-
-  agregarCliente() {
-    // if(this.clienteForm.invalid) {
-    //   this.clienteForm.markAllAsTouched();
-    //   this._snackBar.open('Los campos en rojos son obligatorios', 'Cerrar', {
-    //     duration: 3000,
-    //   });
-    //   Object.values(this.clienteForm.controls).forEach(control => {
-    //     if(control.errors?.['required']) {
-    //       control.markAsTouched();
-    //     }
-    //   });
-
-    //   return;
-    // };
-
-    console.log(this.formularioClienteService.value);
   }
 
   cambiarLabel(e: any) {
