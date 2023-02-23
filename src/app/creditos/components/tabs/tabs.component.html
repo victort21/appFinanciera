@@ -1,0 +1,14 @@
+<mat-tab-group [selectedIndex]="clienteService.selectedIndex">
+  <mat-tab label="DATOS CLIENTE">
+    <app-datos-cliente [cliente]="cliente"></app-datos-cliente>
+  </mat-tab>
+  <mat-tab label="DATOS CREDITO">
+    <app-datos-credito [cliente]="cliente"></app-datos-credito>
+  </mat-tab>
+  <mat-tab label="GALERIA FOTOS">
+    <app-galeria [cliente]="cliente"></app-galeria>
+  </mat-tab>
+  <mat-tab label="CONFIRMACION">
+    <app-confirmacion [cliente]="cliente"></app-confirmacion>
+  </mat-tab>
+</mat-tab-group>
