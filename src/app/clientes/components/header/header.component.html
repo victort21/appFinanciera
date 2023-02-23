@@ -1,0 +1,21 @@
+<header class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center bg-dark py-3 px-4 mb-3">
+  <div>
+    <h1 class="fs-2 text-white m-sm-0">Lista de clientes</h1>
+  </div>
+
+  <div class="d-flex gap-2 mt-3 mt-md-0 align-items-center">
+    <button type="button" class="btn">Buscar</button>
+    <a routerLink="/clientes/nuevo" class="btn">Agregar</a>
+    
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Mas
+      </a>
+    
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Exportar</a></li>
+        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

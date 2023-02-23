@@ -14,6 +14,7 @@ import { CalculoCuotaComponent } from './pages/nuevoCliente/calculo-cuota/calcul
 import { ListadoComponent } from './listado/listado.component';
 import { HomeComponent } from './components/home/home.component';
 import { NuevoCreditoComponent } from './components/tabsNuevoCliente/nuevo-credito.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NuevoCreditoComponent } from './components/tabsNuevoCliente/nuevo-credi
     CalculoCuotaComponent,
     HomeComponent,
     ListadoComponent,
-    NuevoCreditoComponent
+    NuevoCreditoComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
