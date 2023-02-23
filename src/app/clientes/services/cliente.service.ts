@@ -1,5 +1,6 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 import { pattern } from '../interfaces/validator';
 
@@ -7,10 +8,10 @@ import { pattern } from '../interfaces/validator';
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService implements OnInit {
+export class ClienteService {
   selectedIndex = 0;
 
-  private _clientes = [];
+  private _clientes:any[] = [];
 
   formularioCliente = this.fb.group({
     //DATOS GENERALES
@@ -71,20 +72,21 @@ export class ClienteService implements OnInit {
     return [...this._clientes];
   }
 
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    console.log('ngnoninit del sevicio');
-  }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   selectTab(i: number): void {
     this.selectedIndex = i;
     console.log(this.selectedIndex);
   }
 
+  getClientes() {
+    return this.http.get('http://localhost:3000/clientes');
+  }
+
   guardarCliente() {
-    this._clientes.push(this.formularioCliente.value as never);
-    console.log(this._clientes);
+    this.http.post('http://localhost:3000/clientes', this.formularioCliente.value)
+            .subscribe(() => {});
+    
     this.formularioCliente.reset();
   }
 }

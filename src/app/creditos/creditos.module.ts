@@ -6,6 +6,7 @@ import { PorDesembolsarComponent } from './pages/por-desembolsar/por-desembolsar
 import { VerInfoComponent } from './pages/ver-info/ver-info.component';
 import { HomeComponent } from './components/home/home.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     PorDesembolsarComponent,
     VerInfoComponent,
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    ClienteComponent
   ],
   imports: [
     CommonModule,

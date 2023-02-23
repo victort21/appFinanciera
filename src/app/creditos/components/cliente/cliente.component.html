@@ -1,0 +1,6 @@
+<section class="d-flex flex-column flex-md-row flex-wrap gap-3 justify-content-center">
+  <div *ngFor="let cliente of clientes" class="border-bottom">
+    <p class="text-primary">{{cliente.primerApellido + ', ' + cliente.nombres}}</p>
+    <a class="text-success fw-bold" [routerLink]="['/creditos/informacion', cliente.id]">{{ cliente.colonia + ' / ' + cliente.colonia + ' / ' + cliente.casa + ' / ' + cliente.referencia }}</a>
+  </div>
+</section>
