@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { HomeComponent } from './components/home/home.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 import { PorDesembolsarComponent } from './pages/por-desembolsar/por-desembolsar.component';
 import { VerInfoComponent } from './pages/ver-info/ver-info.component';
 
@@ -12,6 +13,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
+        path: '',
+        component: InicioComponent,
+      },
+      {
         path: 'por-desembolsar',
         component: PorDesembolsarComponent,
       },
@@ -19,6 +24,10 @@ const routes: Routes = [
         path: 'informacion/:id',
         component: VerInfoComponent,
       },
+      {
+        path: '**',
+        redirectTo: 'creditos'
+      }
     ]
   }
 ];
