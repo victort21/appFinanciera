@@ -68,6 +68,11 @@ export class ClienteService {
     numeroCuotas: [{value: 0, disabled: true}, [ Validators.required ] ],
   });
 
+  confirmacion = this.fb.group({
+    recomindaCredito: ['', [Validators.required] ],
+    comentarios: ['', [ Validators.required ] ],
+  });
+
   get clientes() {
     return [...this._clientes];
   }

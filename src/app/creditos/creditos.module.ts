@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CreditosRoutingModule } from './creditos-routing.module';
 import { PorDesembolsarComponent } from './pages/por-desembolsar/por-desembolsar.component';
@@ -13,6 +14,7 @@ import { DatosClienteComponent } from './components/datosTabs/datos-cliente/dato
 import { DatosCreditoComponent } from './components/datosTabs/datos-credito/datos-credito.component';
 import { GaleriaComponent } from './components/datosTabs/galeria/galeria.component';
 import { ConfirmacionComponent } from './components/datosTabs/confirmacion/confirmacion.component';
+
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { ConfirmacionComponent } from './components/datosTabs/confirmacion/confi
   imports: [
     CommonModule,
     CreditosRoutingModule,
+    ReactiveFormsModule,
     MaterialModule,
   ]
 })

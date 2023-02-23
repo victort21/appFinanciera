@@ -1,1 +1,35 @@
-<p>confirmacion works!</p>
+<form
+  class="bg-white shadow-md p-2 mt-3 px-3 mx-auto w-md-75"
+  [formGroup]="clienteService.confirmacion"
+>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="recomienda" class="form-label">¿Recomienda credito?</label>
+        <select
+          id="recomienda"
+          class="form-select"
+          formControlName="recomindaCredito"
+        >
+        <option value="" selected disabled>--Seleccione--</option>
+        <option value="si">Si</option>
+        <option value="no">No</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="comentarios" class="form-label">Comentario</label>
+        <textarea
+          id="comentarios"
+          class="form-control"
+          cols="30"
+          placeholder="¿Porque?"
+          rows="5"
+          formControlName="comentarios"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</form>
