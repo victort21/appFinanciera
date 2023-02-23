@@ -1,1 +1,17 @@
-<p>galeria works!</p>
+<section class="bg-white shadow-md p-2 mt-3 px-3 mx-auto w-md-75">
+  <h2 class="fs-1 text-center text-sm-start">Garantias</h2>
+
+  <h3 *ngIf="cliente.nombreArticulo">{{cliente.nombreArticulo}}</h3>
+
+  <div class="d-flex gap-2">
+    <div
+      *ngFor="let imagen of cliente.imagenesGarantia"
+    >
+      <img
+        [src]="imagen"
+        class="w-75"
+        alt="imagen garantia"
+      />
+    </div>
+  </div>
+</section>
