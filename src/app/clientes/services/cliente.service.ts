@@ -71,6 +71,8 @@ export class ClienteService {
   confirmacion = this.fb.group({
     recomindaCredito: ['', [Validators.required] ],
     comentarios: ['', [ Validators.required ] ],
+    desembolso: ['', [ Validators.required, Validators.pattern(pattern.noDecimales) ] ],
+    ticket: [''],
   });
 
   get clientes() {

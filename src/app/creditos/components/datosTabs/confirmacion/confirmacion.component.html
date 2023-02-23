@@ -9,6 +9,7 @@
         <select
           id="recomienda"
           class="form-select"
+          [class]="vs.campoObligatorio('recomindaCredito', clienteService.confirmacion) ? 'border border-danger' : ''"
           formControlName="recomindaCredito"
         >
         <option value="" selected disabled>--Seleccione--</option>
@@ -27,9 +28,83 @@
           cols="30"
           placeholder="¿Porque?"
           rows="5"
+          [class]="vs.campoObligatorio('comentarios', clienteService.confirmacion) ? 'border border-danger' : ''"
           formControlName="comentarios"
         ></textarea>
       </div>
     </div>
   </div>
+
+  <div class="row mt-2 mb-5">
+    <div class="col">
+      <button class="btn btn-success float-md-end w-100 w-sm-auto" (click)="confirmar()">Siguiente</button>
+    </div>
+  </div>
+
+  <div *ngIf="confirmarDesembolso">
+    <header class="bg-dark p-3 my-4">
+      <h2 class="fs-1 text-capitalize text-white mb-0 text-center text-md-start">
+        Confirmar desembolso
+      </h2>
+    </header>
+
+    <div class="mb-3">
+      <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+        <div>
+          <label for="desembolso" class="form-label mb-0">
+            Prestamo:
+          </label>
+        </div>
+
+        <div>
+          <input
+            type="number"
+            formControlName="desembolso"
+            id="desembolso"
+            class="form-control"
+            placeholder="Ingrese un monto"
+          >
+        </div>
+      </div>
+
+      <div class="row my-4">
+        <div class="col-md-4">
+          <input
+            type="file"
+            capture="camera"
+            accept="image/*"
+            class="d-none" #camara
+            (change)="foto($event)"
+          >
+          <button
+            type="button"
+            class="me-3 d-md-none btn btn-info"
+            (click)="camara.click()"
+            [disabled]="ticket"
+          >
+            camara
+          </button>
+        </div>
+    
+      </div>
+      
+      <img *ngIf="ticket" [src]="ticket" alt="ticket desembolso" class="img-fluid" />
+
+      <div class="d-flex gap-2 mb-5 mb-md-0 mt-3 justify-content-end">
+        <button type="button" class="btn btn-success" (click)="cancelarDesembolso()">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)="desembolsar()">Desembolsar</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mt-5">
+    <button type="button" class="btn btn-success" (click)="clienteService.selectTab(2)">
+      {{'<'}}
+    </button>
+  </div>
 </form>
+
+<pre>
+  {{clienteService.confirmacion.value | json  }}
+</pre>
