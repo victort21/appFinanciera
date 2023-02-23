@@ -5,7 +5,7 @@
 </header>
 
 <div *ngIf="cliente.nombres; else tabsInfo">
-  <p>{{ cliente | json }}</p>
+  <app-tabs [cliente]="cliente"></app-tabs>
 </div>
 
 <ng-template #tabsInfo>

@@ -7,6 +7,8 @@ import { VerInfoComponent } from './pages/ver-info/ver-info.component';
 import { HomeComponent } from './components/home/home.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { MaterialModule } from '../shared/material/material.module';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { ClienteComponent } from './components/cliente/cliente.component';
     VerInfoComponent,
     HomeComponent,
     InicioComponent,
-    ClienteComponent
+    ClienteComponent,
+    TabsComponent
   ],
   imports: [
     CommonModule,
-    CreditosRoutingModule
+    CreditosRoutingModule,
+    MaterialModule,
   ]
 })
 export class CreditosModule { }
