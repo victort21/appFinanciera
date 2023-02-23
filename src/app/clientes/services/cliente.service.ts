@@ -89,4 +89,8 @@ export class ClienteService {
     
     this.formularioCliente.reset();
   }
+
+  getCliente(id: string) {
+    return this.http.get(`http://localhost:3000/clientes/${id}`);
+  }
 }

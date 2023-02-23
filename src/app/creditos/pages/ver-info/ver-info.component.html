@@ -1,1 +1,14 @@
-<p>ver-info works!</p>
+<header class="bg-dark p-3">
+  <h1 class="fs-1 text-capitalize text-white mb-0 text-center text-md-start">
+    Informacion del credito
+  </h1>
+</header>
+
+<div *ngIf="cliente.nombres; else tabsInfo">
+  <p>{{ cliente | json }}</p>
+</div>
+
+<ng-template #tabsInfo>
+  <p>cargando...</p>
+</ng-template>
+
