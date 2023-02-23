@@ -65,6 +65,7 @@ export class DocumentacionComponent {
 
     reader.onload = e => {
       this.images.push(e.target?.result as string);
+      this.clienteService.formularioCliente.controls.imagenesDocs.setValue(this.images);
     }
     reader.readAsDataURL(file);
   }

@@ -55,8 +55,10 @@ export class ClienteService implements OnInit {
     //GARANTIAS
     nombreArticulo: ['', [ Validators.required ] ],
     precioArticulo: ['', [ Validators.required, Validators.pattern(pattern.numeros) ] ],
+    imagenesGarantia: [[''], [ Validators.required ] ],
     //DOCUMENTACION
     tipoDocumentacion: ['', [ Validators.required ] ],
+    imagenesDocs: [[''], [ Validators.required ] ],
     //CREDITO
     producto: [{value: 'Microfondo', disabled: true}, [ Validators.required ] ],
     periodicidad: ['', [ Validators.required ] ],
