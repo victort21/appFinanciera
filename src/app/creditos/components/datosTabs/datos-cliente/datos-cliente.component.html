@@ -1,1 +1,30 @@
-<p>datos-cliente works!</p>
+
+<section class="bg-white shadow-md p-2 mt-3 px-3 mx-auto w-md-75">
+  <p class="text-capitalize fw-bold mb-0 text-primary">nombre completo</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.primerApellido}} {{cliente.segundoApellido}}, {{cliente.nombres}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Documento</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.carnetOcedula}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Telefono Fijo</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.telefonoFijo}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Numeros de celular</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.numeroCelular1}}
+  </p>
+  <p *ngIf="cliente.numeroCelular2" class="bg-light p-2 fw-bold rounded-2">
+    {{cliente.numeroCelular2}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Dirección del domicilio</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.colonia}} / {{cliente.casa}} / {{cliente.calle}} / {{cliente.referencia}}
+  </p>
+</section>
