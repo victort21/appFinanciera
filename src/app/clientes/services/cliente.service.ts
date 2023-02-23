@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 import { pattern } from '../interfaces/validator';
@@ -7,8 +7,10 @@ import { pattern } from '../interfaces/validator';
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService {
+export class ClienteService implements OnInit {
   selectedIndex = 0;
+
+  private _clientes = [];
 
   formularioCliente = this.fb.group({
     //DATOS GENERALES
@@ -63,10 +65,24 @@ export class ClienteService {
     numeroCuotas: [{value: 0, disabled: true}, [ Validators.required ] ],
   });
 
+  get clientes() {
+    return [...this._clientes];
+  }
+
   constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    console.log('ngnoninit del sevicio');
+  }
 
   selectTab(i: number): void {
     this.selectedIndex = i;
     console.log(this.selectedIndex);
+  }
+
+  guardarCliente() {
+    this._clientes.push(this.formularioCliente.value as never);
+    console.log(this._clientes);
+    this.formularioCliente.reset();
   }
 }
