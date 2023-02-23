@@ -1,1 +1,31 @@
-<p>datos-credito works!</p>
+<section class="bg-white shadow-md p-2 mt-3 px-3 mx-auto w-md-75">
+  <p class="text-capitalize fw-bold mb-0 text-primary">Tipo de Producto</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.periodicidad}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Numero de credito</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    C - {{cliente.id}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Monto</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.monto | number}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Numero de cuotas</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">
+    {{cliente.plazo * 4}}
+  </p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Monto de cuota</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">350.00</p>
+
+  <p class="text-capitalize fw-bold mb-0 text-primary">Oficial de rutas</p>
+  <p class="bg-light p-2 fw-bold rounded-2 mt-1">PEREZ LOPEZ GERMAN</p>
+</section>
+
+<pre>
+  {{cliente | json}}
+</pre>
