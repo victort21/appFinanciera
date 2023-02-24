@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ClienteService } from 'src/app/clientes/services/cliente.service';
 
 @Component({
   selector: 'app-datos-cliente',
@@ -6,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class DatosClienteComponent {
   @Input() cliente: any
+
+  constructor (public clienteService: ClienteService) {}
 }
