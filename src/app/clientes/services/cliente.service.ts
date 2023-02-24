@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 import { pattern } from '../interfaces/validator';
@@ -73,6 +73,15 @@ export class ClienteService {
     comentarios: ['', [ Validators.required ] ],
     desembolso: ['', [ Validators.required, Validators.pattern(pattern.noDecimales) ] ],
     ticket: [''],
+  });
+
+  rePrestamo = this.fb.group({
+    monto: ['', [Validators.required] ],
+    plazo: ['', [Validators.required] ],
+    periodicidad: [{value: 'Semanal', disabled: true}, [Validators.required] ],
+    numeroCuotas: [{value: '', disabled: true}, [Validators.required, Validators.pattern(pattern.noDecimales)] ],
+    comentario: [''],
+    imagenes: [[''], [Validators.required]]
   });
 
   get clientes() {

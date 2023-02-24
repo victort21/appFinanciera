@@ -1,0 +1,139 @@
+<form class="bg-white p-3" [formGroup]="clienteService.rePrestamo" (ngSubmit)="verFormValues()">
+  <div class="mb-3">
+    <label for="monto" class="form-label">
+      Monto Solicitado
+    </label>
+
+    <input
+      type="number"
+      formControlName="monto"
+      id="monto"
+      [class]="vs.campoObligatorio('monto', clienteService.rePrestamo) ? 'border border-danger' : ''"
+      placeholder="Ingrese un monto"
+      class="form-control"
+    >
+  </div>
+  
+  <div class="mb-3">
+    <label for="periodicidad" class="form-label">
+      Periodicidad
+    </label>
+
+    <input
+      type="text"
+      formControlName="periodicidad"
+      id="periodicidad"
+      class="form-control"
+    >
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="plazo" class="form-label">
+          Plazo
+        </label>
+    
+        <input
+          type="number"
+          formControlName="plazo"
+          id="plazo"
+          [class]="vs.campoObligatorio('plazo', clienteService.rePrestamo) ? 'border border-danger' : ''"
+          placeholder="Ingrese un plazo"
+          (input)="calcularCuota($event)"
+          class="form-control"
+        >
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="numeroCuotas" class="form-label">
+          Numero de Cuotas
+        </label>
+    
+        <input
+          type="text"
+          formControlName="numeroCuotas"
+          id="numeroCuotas"
+          class="form-control"
+        >
+      </div>
+    </div>
+  </div> <!--.row-->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="comentarios" class="form-label">
+          Comentarios
+        </label>
+    
+        <textarea
+          formControlName="comentario"
+          id="numeroCuotas"
+          class="form-control"
+          placeholder="Ingresa un comentario"
+        ></textarea>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="file"
+        capture="camera"
+        accept="image/*"
+        (change)="foto($event)"
+        class="d-none" #camara
+      >
+      <button
+        type="button"
+        class="me-3 d-md-none btn btn-info"
+        (click)="camara.click()"
+        [disabled]="images.length === 2"
+      >
+        camara
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <p *ngIf="images.length" class="mt-2 fw-bold">imagenes</p>
+
+    <div
+      class="d-flex gap-2 d-md-none"
+    >
+      <div
+        *ngFor="let imagen of images; let i = index"
+        class=""
+      >
+        <img
+          [src]="imagen"
+          alt="imagen producto"
+          class="img-fluid mb-3"
+        >
+        <p class="fs-1 text-danger fw-bold" (click)="borrar(i)">X</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-sm-flex mt-5 gap-2 justify-content-sm-end">
+    <div class="mb-3">
+      <input type="button" value="Cancelar" class="btn btn-danger w-100" />
+    </div>
+
+    <div class="">
+      <input type="submit" value="Registrar" class="btn btn-success w-100" />
+    </div>
+
+  </div>
+
+</form>
+
+
+<pre>
+  {{clienteService.rePrestamo.getRawValue() | json}}
+</pre>
