@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./cobranza/cobranza.module').then(m => m.CobranzaModule),
   },
   {
+    path: 're-prestamos',
+    loadChildren: () => import('./re-prestamos/re-prestamos.module').then(m => m.RePrestamosModule),
+  },
+  {
     path: '**',
     redirectTo: 'auth'
   },
