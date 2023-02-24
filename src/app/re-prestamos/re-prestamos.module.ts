@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { RePrestamoComponent } from './components/tabs/re-prestamo/re-prestamo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreditosModule } from '../creditos/creditos.module';
+import { AvalComponent } from '../clientes/pages/nuevoCliente/aval/aval.component';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RePrestamosRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    CreditosModule,
   ]
 })
 export class RePrestamosModule { }

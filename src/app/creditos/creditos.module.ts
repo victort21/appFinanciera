@@ -16,7 +16,6 @@ import { GaleriaComponent } from './components/datosTabs/galeria/galeria.compone
 import { ConfirmacionComponent } from './components/datosTabs/confirmacion/confirmacion.component';
 
 
-
 @NgModule({
   declarations: [
     PorDesembolsarComponent,
@@ -35,6 +34,9 @@ import { ConfirmacionComponent } from './components/datosTabs/confirmacion/confi
     CreditosRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-  ]
+  ],
+  exports: [
+    GaleriaComponent,
+  ],
 })
 export class CreditosModule { }
